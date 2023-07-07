@@ -1,0 +1,30 @@
+.header {
+  margin-bottom: -80px;
+  z-index: 10;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+
+  &__phone {
+    color: $color-default-white;
+    font-family: Alumni Sans;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.78px;
+
+    @include vp-1199 {
+      font-size: 24px;
+      letter-spacing: 0.48px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      letter-spacing: 0.4px;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.promo {
+  position: relative;
+  color: $color-default-white;
+
+  &__container-text {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 98px;
+
+    @include vp-1199 {
+      margin-top: 80px;
+      width: 325px;
+    }
+
+    @include vp-767 {
+      margin-top: 70px;
+      width: 290px;
+    }
+
+    & p {
+      font-family: $ff-alumni;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 1.44px;
+      margin: 0;
+      padding-left: 263px;
+      padding-bottom: 25px;
+
+      @include vp-1199 {
+        padding-bottom: 15px;
+      }
+    }
+
+    & h1 {
+      text-align: right;
+      font-family: $ff-alumni;
+      font-size: 92px;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 4.6px;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+      z-index: 5;
+
+      @include vp-1199 {
+        font-size: 72px;
+        letter-spacing: 3.6px;
+      }
+    }
+
+    & ul {
+      font-size: 14px;
+      line-height: 150%;
+      text-align: right;
+      list-style: none;
+      margin: 0;
+      padding-top: 128px;
+      padding-left: 0;
+    }
+  }
+
+  &__container-text-row {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 80px;
+  }
+
+  &__container {
+    background-image: url("/img/image/promo-background-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 658px;
+    padding-top: 74px;
+
+    @include vp-1199 {
+      background-image: url("/img/image/promo-background-tablet.jpg");
+      height: 554px;
+    }
+
+    @include vp-767 {
+      background-image: url("/img/image/promo-background-mobile.jpg");
+      height: 490px;
+    }
+  }
+
+  &__image img {
+    position: absolute;
+    top: 50px;
+    left: 563px;
+    height: 556px;
+
+    @include vp-1199 {
+      width: 324px;
+      height: 390px;
+      top: 80px;
+      left: 400px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
