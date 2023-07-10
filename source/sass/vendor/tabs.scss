@@ -1,0 +1,87 @@
+.tabs {
+  max-width: 100%;
+}
+
+.tabs__controls {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 45px;
+  width: 340;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.20);
+  margin: 0 auto;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.tabs__control {
+  color: rgba(16, 38, 84, 0.50);
+  font-size: 20px;
+  cursor: pointer;
+  min-width: auto;
+  justify-content: center;
+  padding: 0;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+  }
+
+  &.is-active {
+    pointer-events: none;
+    color: #276895;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #d10a42;
+  }
+}
+
+.tabs__content {
+  margin-bottom: 40px;
+  margin-top: 40x;
+  transition: height 0.3s;
+}
+
+.tabs__element {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  width: 100%;
+
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 15px;
+  }
+}
+
+.tabs__card {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  padding: 68px 77px;
+
+  @media screen and (max-width: 1199px) {
+    padding: 68px 118px;
+  }
+}
+
+.tabs--unset .tabs__content {
+  height: 100px;
+}
+
+.tabs--unset .tabs__element {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

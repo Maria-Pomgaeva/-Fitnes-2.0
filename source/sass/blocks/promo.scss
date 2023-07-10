@@ -119,8 +119,21 @@
   }
 }
 
+.promo__button {
+  align-self: flex-end;
+
+    @include vp-1199 {
+      padding: 20px 30px;
+    }
+
+    @include vp-1199 {
+      align-self: auto;
+    }
+}
+
 .promo__image img {
   height: 556px;
+  object-fit: cover;
 
   @include vp-1199 {
     width: 324px;

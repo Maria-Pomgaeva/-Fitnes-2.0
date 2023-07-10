@@ -1,7 +1,6 @@
 .about {
   &__container {
     display: flex;
-    column-gap: 85px;
     padding: 165px 103px 120px;
 
     @include vp-1199 {
@@ -20,9 +19,15 @@
     padding-left: 60px;
 
     @include vp-1199 {
-      min-width: 502px;
+      width: 502px;
       padding-left: 0;
       text-align: center;
+      padding: 0 15px;
+    }
+
+    @include vp-767 {
+      width: 290px;
+      text-align: left;
     }
 
     & h3 {
@@ -81,12 +86,46 @@
     width: 660px;
     height: 401px;
     margin-top: -43px;
+    margin-left: 85px;
+    object-fit: cover;
 
     @include vp-1199 {
       width: 678px;
       height: 345px;
       margin-top: 42px;
+      margin-left: 0;
     }
+
+    @include vp-767 {
+      width: 100vh;
+      height: 100vh;
+    }
+  }
+}
+
+.about__video {
+  position: relative;
+}
+
+.about__video iframe {
+  position: absolute;
+  top: 245px;
+  right: 359px;
+  width: 364px;
+  height: 228px;
+
+  @include vp-1199 {
+    top: -84px;
+    left: -134px;
+    width: 266px;
+    height: 167px;
+  }
+
+  @include vp-767 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
