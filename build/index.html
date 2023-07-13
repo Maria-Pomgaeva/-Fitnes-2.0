@@ -227,25 +227,45 @@
           </div>
         </section>
         <section class="trainers">
-          <div class="trainers__container container swiper">
+          <div class="trainers__container container trainers__swiper">
             <h2>Тренеры</h2>
             <div class="trainers__items swiper-container">
               <div class="trainers__wrapper swiper-wrapper">
                 <div class="trainers__slide swiper-slide">
                   <h3>Анна Павлова</h3>
-                  <img src="img/image/trainers-one.png" srcset="img/image/trainers-one@2x.png" width="260" height="294" alt="Наши самые красивые тренера">
+                  <div class="trainers__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/image/trainers-one.webp 1x, img/image/trainers-one.webp 2x">
+                      <img src="img/image/trainers-one.png" srcset="img/image/trainers-one@2x.png" width="260" height="294" alt="Наши самые красивые тренера">
+                    </picture>
+                  </div>
                 </div>
                 <div class="trainers__slide swiper-slide">
                   <h3>Алексей Лавров</h3>
-                  <img src="img/image/trainers-two.png" srcset="img/image/trainers-two@2x.png" width="260" height="294" alt="Наши самые красивые тренера">
+                  <div class="trainers__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/image/trainers-two.webp 1x, img/image/trainers-two.webp 2x">
+                      <img src="img/image/trainers-two.png" srcset="img/image/trainers-two@2x.png" width="260" height="294" alt="Наши самые красивые тренера">
+                    </picture>
+                  </div>
                 </div>
                 <div class="trainers__slide swiper-slide">
                   <h3>Александр Пашков</h3>
-                  <img src="img/image/trainers-three.png" srcset="img/image/trainers-three@2x.png" width="260" height="294" alt="Наши самые красивые тренера">
+                  <div class="trainers__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/image/trainers-three.webp 1x, img/image/trainers-three.webp 2x">
+                      <img src="img/image/trainers-three.png" srcset="img/image/trainers-three@2x.png" width="260" height="294" alt="Наши самые красивые тренера">
+                    </picture>
+                  </div>
                 </div>
                 <div class="trainers__slide swiper-slide">
                   <h3>Мария Кетова</h3>
-                  <img src="img/image/trainers-four.png" srcset="img/image/trainers-four@2x.png" width="260" height="294" alt="Наши самые красивые тренера">
+                  <div class="trainers__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/image/trainers-four.webp 1x, img/image/trainers-four.webp 2x">
+                      <img src="img/image/trainers-four.png" srcset="img/image/trainers-four@2x.png" width="260" height="294" alt="Наши самые красивые тренера">
+                    </picture>
+                  </div>
                 </div>
               </div>
               <div class="swiper-button-prev">
@@ -311,6 +331,88 @@
                   <h4>Тренерский опыт</h4>
                   <p>Добивайтесь своих целей быстрее с профессиональным тренером</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="stock">
+          <div class="stock__container container">
+            <h2>Акции</h2>
+            <div class="stock__season-container">
+              <div class="stock__season-text">
+                <h3>Год</h3>
+                <h4>4999</h4>
+                <p>Безлимитный абонемент в тренажерный зал</p>
+                <button class="stock__button stock__button--season button">подробнее</button>
+              </div>
+              <div class="stock__season-image">
+                <picture>
+                  <source type="image/webp" srcset="img/image/stock-mobile.webp 1x, img/image/stock-mobile.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/image/stock-mobile.png 1x, img/image/stock-mobile.png 2x">
+                  <source type="image/webp" srcset="img/image/stock-tablet.webp 1x, img/image/stock-tablet.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/image/stock-tablet.png 1x, img/image/stock-tablet.png 2x">
+                  <source type="image/webp" srcset="img/image/stock-desktop.webp 1x, img/image/stock-desktop.webp 2x">
+                  <img src="img/image/stock-desktop.png" srcset="img/image/stock-desktop@2x.png" width="280" height="462" alt="Девушка, которая привлечет ваше внимание">
+                </picture>
+              </div>
+            </div>
+            <div class="stock__free-wrapper">
+              <div class="stock__free-text">
+                <h3>Месяц бесплатно</h3>
+                <p>Приведи друга, получи абонемент в подарок</p>
+                <button class="stock__button stock__button--free button">подробнее</button>
+              </div>
+              <div class="stock__free-text">
+                <h3>Скидка 20%</h3>
+                <p>Корпоративный фитнес  с командой</p>
+                <button class="stock__button stock__button-free button">подробнее</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="comment">
+          <div class="comment__container swiper">
+            <h2>Отзывы</h2>
+            <div class="comment__wrapper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="comment__image">
+                     <picture>
+                      <source type="image/webp" srcset="img/image/comment-mobile.webp 1x, img/image/comment-mobile.png 2x">
+                      <source media="(min-width: 678px)" srcset="img/image/comment-mobile.png 1x, img/image/comment-mobile@2x.png">
+                      <source type="image/webp" srcset="img/image/comment-desktop.webp 1x, img/image/comment-desktop.png 2x">
+                      <img src="img/image/comment-desktop.png" srcset="img/image/comment-desktop@2x" width="80" height="80" alt="Фотография пользователя">
+                    </picture>
+                  </div>
+                  <div class="comment__text">
+                    <h3>Анна Орлова</h3>
+                    <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="comment__image">
+                     <picture>
+                      <source type="image/webp" srcset="img/image/comment-mobile.webp 1x, img/image/comment-mobile.png 2x">
+                      <source media="(min-width: 678px)" srcset="img/image/comment-mobile.png 1x, img/image/comment-mobile@2x.png">
+                      <source type="image/webp" srcset="img/image/comment-desktop.webp 1x, img/image/comment-desktop.png 2x">
+                      <img src="img/image/comment-desktop.png" srcset="img/image/comment-desktop@2x" width="80" height="80" alt="Фотография пользователя">
+                    </picture>
+                  </div>
+                  <div class="comment__text">
+                    <h3>Мария Плескова</h3>
+                    <p>«Пришла в Supergym и влюбилась, всё прекрасно. Тренеры отзывчивые и красивые, с большим опытом работы. Большой зал с функциональными тренажерами»</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev">
+                <svg width="18" height="34">
+                  <use xlink:href="img/sprite.svg#button-prev"></use>
+                </svg>
+              </div>
+              <div class="swiper-button-next">
+                <svg width="18" height="34">
+                  <use xlink:href="img/sprite.svg#button-next"></use>
+                </svg>
               </div>
             </div>
           </div>
