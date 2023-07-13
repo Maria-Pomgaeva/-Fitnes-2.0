@@ -12,6 +12,7 @@
 
   &__container {
     display: flex;
+    justify-content: space-between;
     background-color: $color-torch-red;
     padding: 0;
 

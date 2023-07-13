@@ -1,38 +1,60 @@
 .stock {
+  padding: 135px 103px 120px;
+
+  @include vp-1199 {
+    padding: 100px 45px;
+  }
+
+  @include vp-767 {
+    padding: 70px 15px;
+  }
+
+  & h2 {
+    font-family: $ff-alumni;
+    font-size: 54px;
+    line-height: normal;
+    letter-spacing: 1.62px;
+    text-align: center;
+    padding-bottom: 35px;
+    margin: 0;
+
+    @include vp-1199 {
+      font-size: 42px;
+      letter-spacing: 1.26px;
+      padding-bottom: 50px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      letter-spacing: 0.96px;
+    }
+  }
+
   &__container {
     display: flex;
-    padding: 135px 103px 120px;
+    column-gap: 40px;
+    padding: 0;
     font-family: $ff-roboto;
+
+    @include vp-1199 {
+      flex-direction: column;
+      column-gap: 0;
+      row-gap: 30px;
+    }
 
     @include vp-767 {
       text-align: center;
-    }
-
-    & h2 {
-      font-family: $ff-alumni;
-      font-size: 54px;
-      line-height: normal;
-      letter-spacing: 1.62px;
-      text-align: center;
-      padding-bottom: 35px;
-      margin: 0;
-
-      @include vp-1199 {
-        font-size: 42px;
-        letter-spacing: 1.26px;
-        padding-bottom: 50px;
-      }
-
-      @include vp-767 {
-        font-size: 32px;
-        letter-spacing: 0.96;
-      }
     }
   }
 }
 
 .stock__season-container {
+  display: flex;
   background-color: $color-torch-red;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
 }
 
 .stock__season-text {
@@ -41,26 +63,40 @@
   color: $color-default-white;
   padding: 45px;
 
+  @include vp-767 {
+    padding: 40px 45px 45px;
+  }
+
   & h3 {
     font-size: 28px;
     font-weight: 700;
-    line-height: 156%;
+    line-height: 115%;
+    margin: 0;
+    padding: 0;
   }
 
   & h4 {
     font-size: 70px;
     font-weight: 700;
-    line-height: 156%;
+    line-height: 115%;
+    margin: 0;
+    padding: 0;
   }
 
   & p {
     font-size: 18px;
     font-weight: 400;
     line-height: 140%;
+    margin: 0;
+    padding: 0;
+
+    @include vp-767 {
+      padding-bottom: 30px;
+    }
   }
 }
 
-.stock__season-image {
+.stock__season-image img {
   width: 280px;
   height: 462px;
 
@@ -78,23 +114,56 @@
 .stock__free-wrapper {
   display: flex;
   flex-direction: column;
+  row-gap: 40px;
+  min-width: 560px;
+
+  @include vp-1199 {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 30px;
+    justify-content: space-between;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    row-gap: 30px;
+    column-gap: 0;
+    min-width: 290px;
+  }
 }
 
 .stock__free-text {
-  border: 7px solid $liner-gradient;
-  padding: 35px 0 35px 35px;
+  border: 7px solid;
+  border-color: $liner-gradient;
+  padding: 27px 0 20px 28px;
   color: #1c3374;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+
+  @include vp-1199 {
+    min-width: 325px;
+    padding: 35px;
+  }
+
+  @include vp-767 {
+    min-width: 290px;
+  }
+
 
   & h3 {
     font-size: 26px;
     font-weight: 700;
-    line-height: 150px;
+    margin: 0;
+    padding-bottom: 15px;
   }
 
   & p {
     font-size: 16px;
     font-weight: 400;
     line-height: 140%;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -104,14 +173,22 @@
   line-height: normal;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #1c3374;
+  padding: 3px 0;
+  border-bottom: 1px solid;
+  align-self: flex-start;
+  margin-top: auto;
+
+  @include vp-767 {
+    align-self: center;
+  }
 
   &--season {
     color: $color-default-white;
+    border-color: $color-default-white;
   }
 
   &--free {
     color: #1c3374;
+    border-color: #1c3374;
   }
 }
