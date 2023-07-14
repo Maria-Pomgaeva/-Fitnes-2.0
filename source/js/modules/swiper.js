@@ -1,12 +1,16 @@
-// // import swiper JS
-// import Swiper, {Navigation, Pagination} from 'swiper';
+// import swiper JS
+export const initSwiper = function () {
+  const swiperTrainers = new Swiper('.trainers__item', {
+    navigation: {
+      nextEl: '.trainers__swiper-btn-next',
+      prevEl: '.trainers__swiper-btn-prev',
+    },
+  });
 
-// export const initSwiper = function () {
-//   const swiper = new Swiper('.trainers__swiper', {
-//     modules: [Navigation, Pagination],
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//   });
-// };
+  const swiperComment = new Swiper('.comment__item', {
+    navigation: {
+      nextEl: '.comment__swiper-btn-next',
+      prevEl: '.comment__swiper-btn-prev',
+    },
+  });
+};

@@ -229,7 +229,7 @@
         <section class="trainers">
           <div class="trainers__container container trainers__swiper">
             <h2>Тренеры</h2>
-            <div class="trainers__items swiper-container">
+            <div class="trainers__items swiper">
               <div class="trainers__wrapper swiper-wrapper">
                 <div class="trainers__slide swiper-slide">
                   <h3>Анна Павлова</h3>
@@ -268,16 +268,16 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button-prev">
+              <button class="trainers__swiper-btn-prev swiper-button-prev">
                 <svg width="18" height="34">
                   <use xlink:href="img/sprite.svg#button-prev"></use>
                 </svg>
-              </div>
-              <div class="swiper-button-next">
+              </button>
+              <button class="trainers__swiper-btn-next swiper-button-next">
                 <svg width="18" height="34">
                   <use xlink:href="img/sprite.svg#button-next"></use>
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
         </section>
@@ -370,11 +370,122 @@
             </div>
           </div>
         </section>
+        <section class="faq">
+          <h2 class="subtitle">Пример аккордеона с вложенностью</h2>
+          <div class="accordion" data-accordion="parent" data-single="data-single" data-close-inner="data-close-inner">
+            <div class="accordion__element" data-accordion="element">
+              <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
+              <div class="accordion__content" data-accordion="content">
+                <div class="accordion__wrapper">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__element" data-accordion="element">
+              <button class="accordion__button accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
+              <div class="accordion__content" data-accordion="content">
+                <div class="accordion__wrapper">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__element" data-accordion="element">
+              <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
+              <div class="accordion__content" data-accordion="content">
+                <div class="accordion__wrapper">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__element" data-accordion="element">
+              <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
+              <div class="accordion__content" data-accordion="content">
+                <div class="accordion__wrapper">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+                </div>
+                <div class="accordion" data-accordion="parent" data-single="data-single">
+                  <div class="accordion__element is-active" data-accordion="element">
+                    <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
+                    <div class="accordion__content" data-accordion="content">
+                      <div class="accordion__wrapper">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion__element" data-accordion="element">
+                    <button class="accordion__button accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
+                    <div class="accordion__content" data-accordion="content">
+                      <div class="accordion__wrapper">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion__element" data-accordion="element">
+                    <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
+                    <div class="accordion__content" data-accordion="content">
+                      <div class="accordion__wrapper">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion__element" data-accordion="element">
+                    <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
+                    <div class="accordion__content" data-accordion="content">
+                      <div class="accordion__wrapper">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+                        <div class="accordion" data-accordion="parent">
+                          <div class="accordion__element is-active" data-accordion="element">
+                            <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
+                            <div class="accordion__content" data-accordion="content">
+                              <div class="accordion__wrapper">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion__element" data-accordion="element">
+                            <button class="accordion__button accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
+                            <div class="accordion__content" data-accordion="content">
+                              <div class="accordion__wrapper">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion__element" data-accordion="element">
+                            <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
+                            <div class="accordion__content" data-accordion="content">
+                              <div class="accordion__wrapper">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion__element" data-accordion="element">
+                            <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
+                            <div class="accordion__content" data-accordion="content">
+                              <div class="accordion__wrapper">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+
         <section class="comment">
-          <div class="comment__container swiper">
+          <div class="comment__container container comment__swiper">
             <h2>Отзывы</h2>
-            <div class="comment__wrapper swiper-container">
-              <div class="swiper-wrapper">
+            <div class="comment__items swiper">
+              <div class="comment__wrapper swiper-wrapper">
                 <div class="comment__inner swiper-slide">
                   <div class="comment__image">
                      <picture>
@@ -404,16 +515,16 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button-prev">
+              <button class="comment__swiper-btn-prev swiper-button-prev">
                 <svg width="18" height="34">
                   <use xlink:href="img/sprite.svg#button-prev"></use>
                 </svg>
-              </div>
-              <div class="swiper-button-next">
+              </button>
+              <button class="comment__swiper-btn-next swiper-button-next">
                 <svg width="18" height="34">
                   <use xlink:href="img/sprite.svg#button-next"></use>
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
         </section>
