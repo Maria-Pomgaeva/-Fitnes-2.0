@@ -1,7 +1,5 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {Form} from './modules/form-validate/form';
 import {initTabs} from './modules/tabs/init-tabs';
-import {initAccordions} from './modules/accordion/init-accordion';
 import './vendor/swiper';
 import {initSwiper} from './modules/swiper';
 import {initPhoneMask} from './utils/phone-mask/phone-mask';
@@ -25,12 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     // initModals();
     initTabs();
-    initAccordions();
     initSwiper();
     initPhoneMask();
-    const form = new Form();
-    window.form = form;
-    form.init();
   });
 
   video.addEventListener('click', () => {

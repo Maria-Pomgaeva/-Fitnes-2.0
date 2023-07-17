@@ -22,7 +22,6 @@
 
     @include vp-1199 {
       width: 502px;
-      padding-left: 0;
       text-align: center;
       padding: 0 15px;
     }
@@ -137,7 +136,7 @@
   left: 0;
   width: 364px;
   height: 228px;
-  background: rgba(20, 54, 122, 0.50);
+  background: rgba(20, 54, 122, 0.5);
 
   @include vp-1199 {
     width: 266px;

@@ -9,7 +9,7 @@
     }
 
     @include vp-767 {
-      padding: 65px 0px 20px;
+      padding: 65px 0 20px;
       text-align: center;
     }
 
@@ -85,7 +85,6 @@
   color: $color-default-white;
   font-weight: 700;
   line-height: 150%;
-  font-weight: 700;
   text-align: center;
 
   & h3 {
@@ -138,7 +137,7 @@
 .adv__container-items:nth-child(4n) {
   padding-top: 80px;
   padding-left: 20px;
-  border-top: 2px solid rgba(209, 10, 66, 0.20);
+  border-top: 2px solid rgba(209, 10, 66, 0.2);
 
   @include vp-1199 {
     padding: 0;
@@ -148,7 +147,7 @@
 
 .adv__container-items:nth-child(5n) {
   padding-top: 80px;
-  border-top: 2px solid rgba(209, 10, 66, 0.20);
+  border-top: 2px solid rgba(209, 10, 66, 0.2);
 
   @include vp-1199 {
     padding-top: 0;

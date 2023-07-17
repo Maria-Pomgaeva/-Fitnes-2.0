@@ -53,7 +53,7 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 100%;
-    border: 1px solid rgba(16, 38, 84, 0.20);
+    border: 1px solid rgba(16, 38, 84, 0.2);
     background-color: rgba(255, 255, 255, 0);
     max-width: 260px;
 
@@ -76,7 +76,7 @@
 .accordion__element-inner {
   position: relative;
   padding: 25px 0 15px;
-  border-top: 1px solid rgba(28, 51, 116, 0.20);
+  border-top: 1px solid rgba(28, 51, 116, 0.2);
 
   & h3 {
     font-size: 24px;
@@ -120,7 +120,7 @@
 }
 
 .accordion__element-inner:last-child {
-  border-bottom: 1px solid rgba(28, 51, 116, 0.20);
+  border-bottom: 1px solid rgba(28, 51, 116, 0.2);
 }
 
 .accordion__content-inner {

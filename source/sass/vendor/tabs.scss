@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   column-gap: 45px;
-  border-bottom: 2px solid rgba(120, 120, 120, 0.20);
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   margin: 0 auto;
   flex-wrap: wrap;
   max-width: 340px;
@@ -22,7 +22,7 @@
 }
 
 .tabs__control {
-  color: rgba(16, 38, 84, 0.50);
+  color: rgba(16, 38, 84, 0.5);
   font-size: 20px;
   cursor: pointer;
   min-width: auto;
