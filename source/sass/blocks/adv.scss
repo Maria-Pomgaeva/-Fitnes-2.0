@@ -2,14 +2,14 @@
   background-color: $color-ghost-white;
 
   &__container {
-    padding: 110px 163px 130px;
+    padding: 110px 163px 120px;
 
     @include vp-1199 {
-      padding: 93px 45px;
+      padding: 93px 45px 100px;
     }
 
     @include vp-767 {
-      padding: 65px 0px;
+      padding: 65px 0px 20px;
       text-align: center;
     }
 
@@ -53,6 +53,7 @@
   font-family: $ff-roboto;
   font-style: normal;
   display: flex;
+  justify-content: center;
 
   @include vp-767 {
     flex-direction: column;
@@ -63,7 +64,7 @@
     grid-column: 2 / 3;
     grid-row: 1 / 3;
     background-color: #1c3374;
-    padding: 83px 34px;
+    padding: 80px 25px 0;
     margin: 0 53px;
 
     @include vp-1199 {
@@ -169,11 +170,15 @@
   }
 
   & h3 {
-    font-family: Roboto Condensed;
+    font-family: $ff-roboto;
     font-size: 71px;
     font-weight: 700;
     line-height: 80%;
-    color: $liner-gradient;
+    background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $color-egyptian-blue;
+    display: table;
     margin: 0;
 
     @include vp-1199 {

@@ -1,16 +1,18 @@
 .about {
   &__container {
+    position: relative;
     display: flex;
-    padding: 165px 103px 120px;
+    justify-content: center;
+    padding: 165px 103px 235px;
 
     @include vp-1199 {
       flex-direction: column;
       align-items: center;
-      padding: 100px 45px;
+      padding: 100px 45px 180px;
     }
 
     @include vp-767 {
-      padding: 70px 0;
+      padding: 65px 0 260px;
     }
   }
 
@@ -28,6 +30,7 @@
     @include vp-767 {
       width: 290px;
       text-align: left;
+      padding: 0;
     }
 
     & h3 {
@@ -49,7 +52,7 @@
       @include vp-767 {
         font-size: 32px;
         letter-spacing: 0.96px;
-        padding-bottom: 20px;
+        padding-bottom: 7px;
       }
     }
 
@@ -64,7 +67,7 @@
       }
 
       @include vp-767 {
-        padding-bottom: 40px;
+        padding-bottom: 25px;
       }
     }
 
@@ -92,41 +95,69 @@
     @include vp-1199 {
       width: 678px;
       height: 345px;
-      margin-top: 42px;
+      margin-top: 20px;
       margin-left: 0;
     }
 
     @include vp-767 {
       width: 100vh;
       height: 100vh;
+      margin-top: 30px;
     }
   }
 }
 
-.about__video {
-  position: relative;
-}
-
-.about__video iframe {
+.about__video-container {
   position: absolute;
-  top: 245px;
-  right: 359px;
+  top: 415px;
+  right: 33%;
   width: 364px;
   height: 228px;
+  background-repeat: no-repeat;
+  background-image: url("/img/image/poster-video.png");
 
   @include vp-1199 {
-    top: -84px;
-    left: -134px;
+    top: 586px;
+    left: 251px;
     width: 266px;
     height: 167px;
   }
 
   @include vp-767 {
-    top: 0;
+    top: 688px;
     left: 0;
     width: 100%;
-    height: 100%;
   }
+}
+
+.about__video-container::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 364px;
+  height: 228px;
+  background: rgba(20, 54, 122, 0.50);
+
+  @include vp-1199 {
+    width: 266px;
+    height: 167px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.about__button-video {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  top: 25%;
+  left: 31%;
+  background-color: $color-transparent;
+  border: none;
 }
 
 .about__container-text {

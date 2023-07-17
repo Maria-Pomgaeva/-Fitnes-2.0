@@ -1,40 +1,140 @@
 .trainers {
-  &__containers {
+  &__container {
+    padding-bottom: 105px;
+
+    @include vp-1199 {
+      padding-bottom: 95px;
+    }
+
+    @include vp-767 {
+      padding-bottom: 70px;
+    }
+
     & h2 {
       font-family: $ff-alumni;
       font-size: 54px;
       line-height: normal;
       letter-spacing: 1.62px;
-      padding: 0;
+      padding-bottom: 48px;
       margin: 0;
 
       @include vp-1199 {
         font-size: 42px;
         letter-spacing: 1.26px;
+        text-align: center;
+        padding-bottom: 38px;
+      }
+
+      @include vp-767 {
+        font-size: 32px;
       }
     }
   }
 }
 
 .trainers__slide {
+  position: relative;
+  cursor: pointer;
+
   & h3 {
     font-family: $ff-roboto;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
-  }
-
-  & img {
-    width: 260px;
-    height: 294px;
+    color: $color-default-white;
+    margin-top: -40px;
+    margin-left: 25%;
 
     @include vp-1199 {
-      width: 268px;
+      margin-left: 20%;
     }
+  }
+}
 
-    @include vp-767 {
-      width: 226px;
-      height: 274px;
-    }
+.trainers__slide:hover .trainers__text {
+  visibility: visible;
+}
+
+.trainers__slide:hover > h3 {
+  display: none;
+}
+
+.trainers__image {
+  width: 260px;
+  height: 294px;
+
+  @include vp-1199 {
+    width: 268px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+    height: 274px;
+  }
+}
+
+.trainers__image img {
+  width: 260px;
+  height: 294px;
+  object-fit: cover;
+
+  @include vp-1199 {
+    width: 268px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+    height: 274px;
+  }
+}
+
+.trainers__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 294px;
+  background-color: rgba(16, 38, 84, 0.89);
+  color: $color-default-white;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  padding-top: 53px;
+  visibility: hidden;
+  transition: $trans-default;
+
+  @include vp-1199 {
+    width: 268px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+    height: 274px;
+  }
+
+  & h3 {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  & p {
+    color: #b6bdcc;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 35px;
+  }
+}
+
+.trainers__text-list {
+  width: 80%;
+  margin: 0 auto;
+
+  & li {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
   }
 }

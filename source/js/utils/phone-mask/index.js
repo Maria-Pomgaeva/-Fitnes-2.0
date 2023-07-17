@@ -1,7 +1,7 @@
-import {initAccordions} from './init-accordion';
+import {initPhoneMask} from './phone-mask';
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
-    initAccordions();
+    initPhoneMask();
   });
 });

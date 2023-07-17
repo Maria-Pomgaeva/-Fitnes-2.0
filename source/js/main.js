@@ -1,9 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initTabs} from './modules/tabs/init-tabs';
+import {initAccordions} from './modules/accordion/init-accordion';
+import './vendor/swiper';
 import {initSwiper} from './modules/swiper';
-
+import {initPhoneMask} from './utils/phone-mask/phone-mask';
 
 // ---------------------------------
 
@@ -14,18 +15,31 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
 
+  const video = document.getElementById('video');
+
   // Modules
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
+    // initModals();
     initTabs();
+    initAccordions();
     initSwiper();
+    initPhoneMask();
     const form = new Form();
     window.form = form;
     form.init();
+  });
+
+  video.addEventListener('click', () => {
+    if (video.classList.contains('active')) {
+      return;
+    }
+    let src = video.dataset.src;
+    video.classList.add('active');
+    video.insertAdjacentHTML('afterbegin', '<iframe src="' + src + '"  title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
   });
 });
 

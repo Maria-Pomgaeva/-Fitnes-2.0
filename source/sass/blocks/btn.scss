@@ -32,11 +32,12 @@
     font-weight: 700;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    border: 2px solid $color-default-black;
+    outline: 2px solid $color-default-black;
     color: $color-default-black;
 
     @include hover-focus {
-      background-color: $liner-gradient;
+      background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+      outline: none;
       color: $color-default-white;
     }
 

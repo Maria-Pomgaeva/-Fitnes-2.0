@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Описание проекта">
+    <meta name="description" content="ФИТНЕС ЦЕНТР">
     <title>ФИТНЕС ЦЕНТР SUPERGYM</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico">
     <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
@@ -37,7 +38,7 @@
                 </ul>
                 <h1>Фитнес центр</h1>
               </div>
-              <button class="promo__button button button--dark">Купить абонемент</button>
+              <a class="promo__button button button--dark" href="#subscription">Купить абонемент</a>
             </div>
             <div class="promo__image">
               <picture>
@@ -69,12 +70,16 @@
                 <img src="img/image/about-desktop-img.jpg" srcset="img/image/about-desktop-img@2x.jpg" width="660" height="401" alt="Наш тренажёрный зал">
               </picture>
             </div>
-            <div class="about__video">
-                <iframe poster="img/image/poster-video.png" src="https://www.youtube.com/embed/9TZXsZItgdw?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="about__video-container" id="video" data-src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1">
+              <button class="about__button-video">
+                <svg width="100" height="100">
+                  <use xlink:href="img/sprite.svg#video-button"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </section>
-        <section class="subscription">
+        <section class="subscription" id="subscription">
           <div class="subscription__container container tabs no-transition-global" data-tabs="parent" data-delay="300" data-height="max">
             <h2>Абонементы</h2>
             <div class="tabs__controls" data-tabs="controls">
@@ -83,7 +88,7 @@
               <button class="tabs__control button" type="button" data-tabs="control">12 месяцев</button>
             </div>
             <div class="tabs__content" data-tabs="content">
-              <div class="tabs__element" data-tabs="element">
+              <div class="tabs__element is-active" data-tabs="element">
                 <div class="tabs__card">
                   <div class="subscription__card-text">
                     <h4>С тренером</h4>
@@ -95,7 +100,7 @@
                     <button class="subscription__button button button--light">купить абонемент</button>
                   </div>
                 </div>
-                <div class="tabs__card">
+                <div class="tabs__card is-active">
                   <div class="subscription__card-text">
                     <h4>Дневной</h4>
                     <p>с 8:00 до 17:00</p>
@@ -217,11 +222,11 @@
             <div class="show-card__container-image">
               <picture>
                 <source type="image/webp" srcset="img/image/show-card-mobile.webp 1x, img/image/show-card-mobile.webp 2x">
-                <source media="(min-width: 678px)" srcset="img/image/show-card-mobile.jpg 1x, img/image/show-card-mobile.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/image/show-card-mobile.jpg 1x, img/image/show-card-mobile.jpg 2x">
                 <source type="image/webp" srcset="img/image/show-card-tablet.webp 1x, img/image/show-card-tablet.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/image/show-card-tablet.jpg 1x, img/image/show-card-tablet.jpg 2x">
                 <source type="image/webp" srcset="img/image/show-card-desktop.webp 1x, img/image/show-card-desktop.webp 2x">
-                <img src="img/image/show-card-desktop.jpg" srcset="img/image/show-card-desktop@2x.jpg" width="660" height="500" alt="Спортсмен соревнований CrossFit">
+                <img src="img/image/show-card-desktop.jpg" srcset="img/image/show-card-desktop@2x.jpg" width="660" height="500" alt="Участник соревнований по CrossFit">
               </picture>
             </div>
           </div>
@@ -232,52 +237,80 @@
             <div class="trainers__items swiper">
               <div class="trainers__wrapper swiper-wrapper">
                 <div class="trainers__slide swiper-slide">
-                  <h3>Анна Павлова</h3>
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp" srcset="img/image/trainers-one.webp 1x, img/image/trainers-one.webp 2x">
                       <img src="img/image/trainers-one.png" srcset="img/image/trainers-one@2x.png" width="260" height="294" alt="Наши самые красивые тренера">
                     </picture>
                   </div>
+                  <h3>Анна Павлова</h3>
+                  <div class="trainers__text">
+                    <h3>Анна Павлова</h3>
+                    <p>Балерина,<br> нутрициолог</p>
+                    <ul class="trainers__text-list">
+                      <li>Certified Level 2 Trainer</li>
+                      <li>Участница спектаклей в Большом театре</li>
+                      <li>Опыт — 5 лет</li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="trainers__slide swiper-slide">
-                  <h3>Алексей Лавров</h3>
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp" srcset="img/image/trainers-two.webp 1x, img/image/trainers-two.webp 2x">
                       <img src="img/image/trainers-two.png" srcset="img/image/trainers-two@2x.png" width="260" height="294" alt="Наши самые красивые тренера">
                     </picture>
                   </div>
+                  <h3>Алексей Лавров</h3>
+                  <div class="trainers__text">
+                    <h3>Алексей Лавров</h3>
+                    <p>Силовые тренировки</p>
+                    <ul class="trainers__text-list">
+                      <li>Certified Level 2 Trainer</li>
+                      <li>Мастер спорта по легкой атлетике</li>
+                      <li>Опыт — 8 лет</li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="trainers__slide swiper-slide">
-                  <h3>Александр Пашков</h3>
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp" srcset="img/image/trainers-three.webp 1x, img/image/trainers-three.webp 2x">
                       <img src="img/image/trainers-three.png" srcset="img/image/trainers-three@2x.png" width="260" height="294" alt="Наши самые красивые тренера">
                     </picture>
                   </div>
+                  <h3>Александр Пашков</h3>
+                  <div class="trainers__text">
+                    <h3>Александр Пашков</h3>
+                    <p>CrossFit</p>
+                    <ul class="trainers__text-list">
+                      <li>Certified Level 3 Trainer</li>
+                      <li>Победитель чемпионата России по CrossFit</li>
+                      <li>Опыт — 6 лет</li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="trainers__slide swiper-slide">
-                  <h3>Мария Кетова</h3>
                   <div class="trainers__image">
                     <picture>
                       <source type="image/webp" srcset="img/image/trainers-four.webp 1x, img/image/trainers-four.webp 2x">
                       <img src="img/image/trainers-four.png" srcset="img/image/trainers-four@2x.png" width="260" height="294" alt="Наши самые красивые тренера">
                     </picture>
                   </div>
+                  <h3>Мария Кетова</h3>
+                  <div class="trainers__text">
+                    <h3>Мария Кетова</h3>
+                    <p>Йогиня</p>
+                    <ul class="trainers__text-list">
+                      <li>Certified Level 1 Trainer</li>
+                      <li>Учасница множества ретритов</li>
+                      <li>Опыт — 5 лет</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <button class="trainers__swiper-btn-prev swiper-button-prev">
-                <svg width="18" height="34">
-                  <use xlink:href="img/sprite.svg#button-prev"></use>
-                </svg>
-              </button>
-              <button class="trainers__swiper-btn-next swiper-button-next">
-                <svg width="18" height="34">
-                  <use xlink:href="img/sprite.svg#button-next"></use>
-                </svg>
-              </button>
+              <button class="trainers__swiper-button trainers__swiper-button--prev swiper-button-prev"></button>
+              <button class="trainers__swiper-button trainers__swiper-button--next swiper-button-next"></button>
             </div>
           </div>
         </section>
@@ -365,132 +398,198 @@
               <div class="stock__free-text">
                 <h3>Скидка 20%</h3>
                 <p>Корпоративный фитнес  с командой</p>
-                <button class="stock__button stock__button-free button">подробнее</button>
+                <button class="stock__button stock__button--free button">подробнее</button>
               </div>
             </div>
           </div>
         </section>
         <section class="faq">
-          <h2 class="subtitle">Пример аккордеона с вложенностью</h2>
-          <div class="accordion" data-accordion="parent" data-single="data-single" data-close-inner="data-close-inner">
-            <div class="accordion__element" data-accordion="element">
-              <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-              <div class="accordion__content" data-accordion="content">
-                <div class="accordion__wrapper">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+          <h2>Вопросы и ответы</h2>
+          <div class="accordion__container tabs no-transition-global" data-tabs="parent" data-delay="300" data-height="max">
+            <div class="accordion__controls" data-tabs="controls">
+              <button class="accordion__button" type="button" data-tabs="control">Центр</button>
+              <button class="accordion__button" type="button" data-tabs="control">Абонемент</button>
+              <button class="accordion__button" type="button" data-tabs="control">Услуги</button>
+              <button class="accordion__button" type="button" data-tabs="control">Правила</button>
+            </div>
+            <div class="accordion__content" data-tabs="content">
+              <!-- Центр -->
+              <div class="accordion__element" data-tabs="element">
+                <div class="accordion__container-inner">
+                  <details class="accordion__element-inner open">
+                    <summary class="accordion__content-inner">
+                      <h3>Как стать членом фитнес-центра?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
+                    </div>
+                  </details>
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                      <h3>Где можно посмотреть расписание?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>Мы работаем каждый день, ваше расписание будет формироваться согласно купленого абанимента</p>
+                    </div>
+                  </details>
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                    <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
+                    <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>В нашем центре есть кулеры, но вам необходимо приносить с собой свою бутылочку, потому что мы заботися об экологии и не пользуемся пластиковыми стаканчиками! Полотенц вам так же необходимо приносить с собой.</p>
+                    </div>
+                  </details>
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                      <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>В нашем клубе работают только лучшие тренера города, постоянно повышающие свою квалификацию на различных курсах и мастер классах</p>
+                    </div>
+                  </details>
                 </div>
               </div>
-            </div>
-            <div class="accordion__element" data-accordion="element">
-              <button class="accordion__button accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-              <div class="accordion__content" data-accordion="content">
-                <div class="accordion__wrapper">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+              <!-- Абонемент -->
+              <div class="accordion__element is-active" data-tabs="element">
+                <div class="accordion__container-inner">
+                  <details class="accordion__element-inner open">
+                    <summary class="accordion__content-inner">
+                      <h3>Занятия с тренером входят в абонемент?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>При посещении тренажерного зала вам необходимо оплачить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,  получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                    </div>
+                  </details>
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                      <h3>Можно ли заморозить абонемент?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>Нет, спорт это жизнь!</p>
+                    </div>
+                  </details>
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                      <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>Вы приобретаете абонемент на определенное колличество занятий и их посещаете</p>
+                    </div>
+                  </details>
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                      <h3>Что такое семейный доступ и доступ для друзей?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>Вы можете привести своих друзей или детей и к нам и мы предоставим вам скидку 20%.</p>
+                    </div>
+                  </details>
                 </div>
               </div>
-            </div>
-            <div class="accordion__element" data-accordion="element">
-              <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-              <div class="accordion__content" data-accordion="content">
-                <div class="accordion__wrapper">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
+              <!-- Услуги -->
+              <div class="accordion__element" data-tabs="element">
+                <div class="accordion__container-inner">
+                  <details class="accordion__element-inner is-active">
+                    <summary class="accordion__content-inner">
+                      <h3>Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+                    </div>
+                  </details>
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                      <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>В нашем клубе мы кажды месяц проводим соревнования или различные лекции для членов фитнес-центра</p>
+                    </div>
+                  </details>
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                      <h3>Можно ли приобрести в центре спортивное питание?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>Да, уточняйте на стоки администратора</p>
+                    </div>
+                  </details>
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                      <h3>Есть ли в центре детская комната?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>Есть комфортная, безопасная, а главное – веселая, яркая комната, где ваши дети найдут себе развлечение по вкусу</p>
+                    </div>
+                  </details>
                 </div>
               </div>
-            </div>
-            <div class="accordion__element" data-accordion="element">
-              <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-              <div class="accordion__content" data-accordion="content">
-                <div class="accordion__wrapper">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
-                </div>
-                <div class="accordion" data-accordion="parent" data-single="data-single">
-                  <div class="accordion__element is-active" data-accordion="element">
-                    <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-                    <div class="accordion__content" data-accordion="content">
-                      <div class="accordion__wrapper">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
-                      </div>
+              <!-- Правила -->
+              <div class="accordion__element" data-tabs="element">
+                <div class="accordion__container-inner">
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                      <h3>Есть в фитнес-центре дресс-код?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
                     </div>
-                  </div>
-                  <div class="accordion__element" data-accordion="element">
-                    <button class="accordion__button accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-                    <div class="accordion__content" data-accordion="content">
-                      <div class="accordion__wrapper">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
-                      </div>
+                  </details>
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                      <h3>Можно ли приводить с собой детей на тренировки?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>Нет, вы можете отдохнуть от них, отдав их в детскую комнату!</p>
                     </div>
-                  </div>
-                  <div class="accordion__element" data-accordion="element">
-                    <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-                    <div class="accordion__content" data-accordion="content">
-                      <div class="accordion__wrapper">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
-                      </div>
+                  </details>
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                      <h3>Какие дополнительные правила посещения центра?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>Посещать центр могут люди, не имеющие острых или хронических инфекционных или кожных заболеваний, а также противопоказаний для занятий в физкультурных учреждениях.</p>
                     </div>
-                  </div>
-                  <div class="accordion__element" data-accordion="element">
-                    <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-                    <div class="accordion__content" data-accordion="content">
-                      <div class="accordion__wrapper">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
-                        <div class="accordion" data-accordion="parent">
-                          <div class="accordion__element is-active" data-accordion="element">
-                            <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-                            <div class="accordion__content" data-accordion="content">
-                              <div class="accordion__wrapper">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="accordion__element" data-accordion="element">
-                            <button class="accordion__button accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-                            <div class="accordion__content" data-accordion="content">
-                              <div class="accordion__wrapper">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="accordion__element" data-accordion="element">
-                            <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-                            <div class="accordion__content" data-accordion="content">
-                              <div class="accordion__wrapper">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="accordion__element" data-accordion="element">
-                            <button class="accordion__button btn btn--aquamarine" type="button" data-accordion="button">Открыть</button>
-                            <div class="accordion__content" data-accordion="content">
-                              <div class="accordion__wrapper">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                  </details>
+                  <details class="accordion__element-inner">
+                    <summary class="accordion__content-inner">
+                      <h3>Нужна ли медицинская справка для посещения залов и бассейна?</h3>
+                      <button class="accordion__button-inner button" type="button"><span class="visually-hidden">Открыть</span></button>
+                    </summary>
+                    <div class="accordion__wrapper-inner">
+                      <p>Обязательно!</p>
                     </div>
-                  </div>
+                  </details>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
-
-
-
-
-
         <section class="comment">
           <div class="comment__container container comment__swiper">
             <h2>Отзывы</h2>
             <div class="comment__items swiper">
               <div class="comment__wrapper swiper-wrapper">
-                <div class="comment__inner swiper-slide">
+                <div class="comment__slide swiper-slide">
                   <div class="comment__image">
                      <picture>
                       <source type="image/webp" srcset="img/image/comment-mobile.webp 1x, img/image/comment-mobile.png 2x">
-                      <source media="(min-width: 678px)" srcset="img/image/comment-mobile.png 1x, img/image/comment-mobile@2x.png">
+                      <source media="(min-width: 678px)" srcset="img/image/comment-mobile.png 1x, img/image/comment-mobile.png 2x">
                       <source type="image/webp" srcset="img/image/comment-desktop.webp 1x, img/image/comment-desktop.png 2x">
                       <img src="img/image/comment-desktop.png" srcset="img/image/comment-desktop@2x" width="80" height="80" alt="Фотография пользователя">
                     </picture>
@@ -500,11 +599,11 @@
                     <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
                   </div>
                 </div>
-                <div class="comment__inner swiper-slide visually-hidden">
+                <div class="comment__slide swiper-slide">
                   <div class="comment__image">
                      <picture>
                       <source type="image/webp" srcset="img/image/comment-mobile.webp 1x, img/image/comment-mobile.png 2x">
-                      <source media="(min-width: 678px)" srcset="img/image/comment-mobile.png 1x, img/image/comment-mobile@2x.png">
+                      <source media="(min-width: 678px)" srcset="img/image/comment-mobile.png 1x, img/image/comment-mobile.png 2x">
                       <source type="image/webp" srcset="img/image/comment-desktop.webp 1x, img/image/comment-desktop.png 2x">
                       <img src="img/image/comment-desktop.png" srcset="img/image/comment-desktop@2x" width="80" height="80" alt="Фотография пользователя">
                     </picture>
@@ -515,16 +614,43 @@
                   </div>
                 </div>
               </div>
-              <button class="comment__swiper-btn-prev swiper-button-prev">
-                <svg width="18" height="34">
-                  <use xlink:href="img/sprite.svg#button-prev"></use>
-                </svg>
-              </button>
-              <button class="comment__swiper-btn-next swiper-button-next">
-                <svg width="18" height="34">
-                  <use xlink:href="img/sprite.svg#button-next"></use>
-                </svg>
-              </button>
+              <button class="comment__swiper-button-prev swiper-button-prev"></button>
+              <button class="comment__swiper-button-next swiper-button-next"></button>
+            </div>
+          </div>
+        </section>
+        <section class="record">
+          <div class="record__free-lesson">
+            <h2>Бесплатное занятие </h2>
+            <form class="form" action="https://echo.htmlacademy.ru" method="post">
+              <label class="form__name-label" for="name" data-form="data-on-input-validate">
+                <input class="form__field" id="name" placeholder="Имя" type="text">
+              </label>
+              <label class="form__name-label" for="phone" data-form="data-on-input-validate">
+                <input class="form__field" id="phone" placeholder="Телефон" type="tel">
+              </label>
+              <button class="form__button button" type="reset">отправить</button>
+            </form>
+          </div>
+          <div class="record__contact">
+            <h2>Контакты</h2>
+            <div class="record__contact-container">
+              <div class="record__contact-wrapper-inner">
+                <h3>Адрес:</h3>
+                <p>г. Омск, ул. 60 лет Октября, 7</p>
+              </div>
+              <div class="record__contact-wrapper-inner">
+                <h3>График работы:</h3>
+                <p>Пн-Вс: с 8:00 до 22:00</p>
+              </div>
+              <div class="record__contact-wrapper-inner">
+                <h3>Телефон:</h3>
+                <p>8-800-555-55-55</p>
+              </div>
+              <div class="record__contact-wrapper-inner">
+                <h3>Email:</h3>
+                <p>omsk@supergym.ru</p>
+              </div>
             </div>
           </div>
         </section>

@@ -1,6 +1,6 @@
 .show-card {
   margin: 0 auto;
-  padding: 120px 103px 106px;
+  padding: 120px 103px 115px;
 
   @include vp-1199 {
     padding: 100px 45px;
@@ -13,6 +13,7 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: $color-torch-red;
     padding: 0;
 
@@ -144,6 +145,23 @@
   }
 }
 
+.show-card__container-image {
+  width: 660px;
+  height: 500px;
+  object-fit: cover;
+
+  @include vp-1199 {
+    width: 386px;
+    height: 292px;
+    flex-shrink: 0;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    height: 292px;
+  }
+}
+
 .show-card__container-image img {
   width: 660px;
   height: 500px;
@@ -153,5 +171,10 @@
     width: 386px;
     height: 292px;
     flex-shrink: 0;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    height: 292px;
   }
 }

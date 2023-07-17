@@ -2,7 +2,7 @@
   padding: 135px 103px 120px;
 
   @include vp-1199 {
-    padding: 100px 45px;
+    padding: 95px 45px 100px;
   }
 
   @include vp-767 {
@@ -21,7 +21,7 @@
     @include vp-1199 {
       font-size: 42px;
       letter-spacing: 1.26px;
-      padding-bottom: 50px;
+      padding-bottom: 40px;
     }
 
     @include vp-767 {
@@ -32,12 +32,14 @@
 
   &__container {
     display: flex;
+    justify-content: center;
     column-gap: 40px;
     padding: 0;
     font-family: $ff-roboto;
 
     @include vp-1199 {
       flex-direction: column;
+      align-items: center;
       column-gap: 0;
       row-gap: 30px;
     }
@@ -50,6 +52,7 @@
 
 .stock__season-container {
   display: flex;
+  justify-content: space-between;
   background-color: $color-torch-red;
 
   @include vp-767 {
@@ -62,6 +65,7 @@
   flex-direction: column;
   color: $color-default-white;
   padding: 45px;
+  max-width: 280px;
 
   @include vp-767 {
     padding: 40px 45px 45px;
@@ -99,6 +103,7 @@
 .stock__season-image img {
   width: 280px;
   height: 462px;
+  object-fit: fill;
 
   @include vp-1199 {
     width: 399px;
@@ -129,21 +134,23 @@
     row-gap: 30px;
     column-gap: 0;
     min-width: 290px;
+    align-items: center;
   }
 }
 
 .stock__free-text {
   border: 7px solid;
-  border-color: $liner-gradient;
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image-slice: 1;
   padding: 27px 0 20px 28px;
-  color: #1c3374;
+  color: $color-egyptian-blue;
   min-height: 210px;
   display: flex;
   flex-direction: column;
 
   @include vp-1199 {
-    min-width: 325px;
-    padding: 35px;
+    max-width: 325px;
+    padding: 25px 35px;
   }
 
   @include vp-767 {
@@ -191,4 +198,23 @@
     color: #1c3374;
     border-color: #1c3374;
   }
+}
+
+.stock__button:hover {
+  opacity: 0.8;
+}
+
+.stock__button--season:focus {
+  padding: 10px;
+  border: 1px solid $color-default-white;
+}
+
+.stock__button--free:focus {
+  padding: 10px;
+  border: 1px solid #1c3374;
+}
+
+.stock__button:active {
+  color: $color-default-white;
+  border-color: $color-default-white;
 }

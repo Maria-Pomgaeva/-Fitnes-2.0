@@ -69,10 +69,6 @@
     flex-direction: column;
     row-gap: 40px;
   }
-
-  @media screen and (max-width: 767px) {
-    padding: 15px;
-  }
 }
 
 .tabs__card {
@@ -81,15 +77,17 @@
   justify-content: center;
   flex-wrap: wrap;
   background-color: #ffffff;
-  padding: 65px 77px;
+  padding: 65px 0;
 
-  @media screen and (max-width: 1199px) {
-    padding: 65px 118px;
+  @media screen and (max-width: 767px) {
+    padding: 55px 0;
   }
 }
 
-.tabs__card:active {
-  outline: 7px solid (linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+.tabs__card .is-active {
+  border: 7px solid #003eb7;
+  border-image-slice: 1;
+  border-image: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
 }
 
 .tabs--unset .tabs__content {
