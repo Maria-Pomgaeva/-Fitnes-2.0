@@ -7,7 +7,6 @@
 // Swiper 7.4.1
 @import "vendor/swiper";
 @import "vendor/accordion.scss";
-@import "vendor/data-accordion.scss";
 
 // Global
 // ---------------------------------
@@ -23,6 +22,7 @@
 // ---------------------------------
 
 @import "blocks/btn";
+@import "blocks/custom-input";
 @import "blocks/header.scss";
 @import "blocks/footer.scss";
 @import "blocks/promo.scss";
@@ -33,7 +33,6 @@
 @import "blocks/comment.scss";
 @import "blocks/stock.scss";
 @import "blocks/trainers.scss";
-@import "blocks/fag.scss";
 @import "blocks/record.scss";
 
 // ---------------------------------

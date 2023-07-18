@@ -8,6 +8,7 @@
     <title>ФИТНЕС ЦЕНТР SUPERGYM</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
     <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
@@ -70,12 +71,8 @@
                 <img src="img/image/about-desktop-img.jpg" srcset="img/image/about-desktop-img@2x.jpg" width="660" height="401" alt="Наш тренажёрный зал">
               </picture>
             </div>
-            <div class="about__video-container" id="video" data-src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1">
-              <button class="about__button-video" type="button" aria-label="Включить видео">
-                <svg width="100" height="100">
-                  <use xlink:href="img/sprite.svg#video-button"></use>
-                </svg>
-              </button>
+            <div class="about__video-container" id="video" data-src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=0">
+              <button class="about__button-video about__button-video--icon" type="button" aria-label="Включить видео"></button>
             </div>
           </div>
         </section>
@@ -83,9 +80,9 @@
           <div class="subscription__container container tabs no-transition-global" data-tabs="parent" data-delay="300" data-height="max">
             <h2>Абонементы</h2>
             <div class="tabs__controls" data-tabs="controls">
-              <button class="tabs__control button" type="button" data-tabs="control">1 месяц</button>
-              <button class="tabs__control button" type="button" data-tabs="control">6 месяцев</button>
-              <button class="tabs__control button" type="button" data-tabs="control">12 месяцев</button>
+              <button class="tabs__control" type="button" data-tabs="control">1 месяц</button>
+              <button class="tabs__control" type="button" data-tabs="control">6 месяцев</button>
+              <button class="tabs__control" type="button" data-tabs="control">12 месяцев</button>
             </div>
             <div class="tabs__content" data-tabs="content">
               <div class="tabs__element is-active" data-tabs="element">
@@ -206,8 +203,7 @@
                     <h3>Дата</h3>
                     <p>7</p>
                     <div class="show-card__text-content show-card__text-content--date-container">
-                      <p>Марта</p>
-                      <p>2019</p>
+                      <p>Марта<br><span>2019</span></p>
                     </div>
                   </div>
                   <div class="show-card__text-content">
@@ -309,16 +305,32 @@
                   </div>
                 </div>
               </div>
-              <button class="trainers__swiper-button trainers__swiper-button--prev swiper-button-prev" type="button"></button>
-              <button class="trainers__swiper-button trainers__swiper-button--next swiper-button-next" type="button"></button>
+
             </div>
+              <button class="trainers__swiper-button trainers__swiper-button--prev swiper-button-prev" type="button">
+                <svg width="16" height="32">
+                  <use xlink:href="img/sprite.svg#stroke"></use>
+                </svg>
+              </button>
+              <button class="trainers__swiper-button trainers__swiper-button--next swiper-button-next" type="button">
+                <svg width="16" height="32">
+                  <use xlink:href="img/sprite.svg#stroke"></use>
+                </svg>
+              </button>
           </div>
         </section>
         <section class="adv">
           <div class="adv__container container">
             <h2>Наши преимущества</h2>
-            <div class="adv__container-tablet">
-              <div class="adv__container-items">
+            <ul class="adv__list">
+              <li class="adv__container-items adv__container-items--center">
+                <div class="adv__item-center">
+                  <h3>100</h3>
+                  <h4>Тренажеров</h4>
+                  <p>Современные тренажеры на все группы мышц</p>
+                </div>
+              </li>              
+              <li class="adv__container-items">
                 <div class="adv__item-number">
                   <h3>900</h3>
                   <p>кв/м</p>
@@ -327,8 +339,8 @@
                   <h4>Площадь</h4>
                   <p>Занимайтесь без очередей и толпучки</p>
                 </div>
-              </div>
-              <div class="adv__container-items">
+              </li>
+              <li class="adv__container-items">
                 <div class="adv__item-number">
                   <h3>70</h3>
                   <p>машин</p>
@@ -337,15 +349,8 @@
                   <h4>Собственная парковка</h4>
                   <p>Вы всегда найдете место для своей машины на нашей парковке</p>
                 </div>
-              </div>
-              <div class="adv__container-items adv__container-items--center">
-                <div class="adv__item-center">
-                  <h3>100</h3>
-                  <h4>Тренажеров</h4>
-                  <p>Современные тренажеры на все группы мышц</p>
-                </div>
-              </div>
-              <div class="adv__container-items">
+              </li>
+              <li class="adv__container-items">
                 <div class="adv__item-number">
                   <h3>350</h3>
                   <p>мест</p>
@@ -354,8 +359,8 @@
                   <h4>Комфорт</h4>
                   <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
                 </div>
-              </div>
-              <div class="adv__container-items">
+              </li>
+              <li class="adv__container-items">
                 <div class="adv__item-number">
                   <h3>5+</h3>
                   <p>лет</p>
@@ -364,8 +369,8 @@
                   <h4>Тренерский опыт</h4>
                   <p>Добивайтесь своих целей быстрее с профессиональным тренером</p>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
         <section class="stock">
@@ -403,7 +408,7 @@
             </div>
           </div>
         </section>
-        <section class="faq">
+        <section class="accordion">
           <h2>Вопросы и ответы</h2>
           <div class="accordion__container tabs no-transition-global" data-tabs="parent" data-delay="300" data-height="max">
             <div class="accordion__controls" data-tabs="controls">
@@ -622,15 +627,17 @@
         <section class="record">
           <div class="record__free-lesson">
             <h2>Бесплатное занятие </h2>
-            <form class="form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form">
+            <form action="https://echo.htmlacademy.ru" method="post" data-form-validate data-callback="callback">
               <label class="form__name-label" for="name" data-form="data-on-input-validate">
-                <input class="form__field" id="name" placeholder="Имя" type="text">
+                <input class="form__field" id="name" placeholder="Имя" type="text" data-validate-type="text", data-limitation="name", data-message-base="Поле обязательно к заполнению", data-message-extra="Проверьте корректность заполнения поля", data-required>
               </label>
               <label class="form__name-label" for="phone" data-form="data-on-input-validate">
-                <input class="form__field" id="phone" placeholder="Телефон" type="tel">
+                <input class="form__field" id="phone" placeholder="Телефон" type="tel" data-validate-type="phone", data-on-input-validate, data-message-base="Поле обязательно к заполнению", data-message-extra="Проверьте корректность заполнения поля", data-message-success="Поле заполнено верно", data-required>
               </label>
               <button class="form__button button" type="reset">отправить</button>
             </form>
+            </div>
           </div>
           <div class="record__contact">
             <h2>Контакты</h2>
@@ -645,11 +652,11 @@
               </div>
               <div class="record__contact-wrapper-inner">
                 <h3>Телефон:</h3>
-                <p>8-800-555-55-55</p>
+                <a href="tel:+78005555555">8-800-555-55-55</a>
               </div>
               <div class="record__contact-wrapper-inner">
                 <h3>Email:</h3>
-                <p>omsk@supergym.ru</p>
+                <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
               </div>
             </div>
           </div>

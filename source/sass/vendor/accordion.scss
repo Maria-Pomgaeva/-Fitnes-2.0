@@ -1,5 +1,36 @@
 .accordion {
+  background-color: #f8f9fc;
+  padding: 120px 103px 330px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1199px) {
+    padding: 100px 45px 100px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 70px 15px 60px;
+  }
+
+  & h2 {
+    font-family: "Alumni Sans", "Helvetica", sans-serif;
+    font-size: 54px;
+    line-height: normal;
+    letter-spacing: 1.62px;
+    padding-bottom: 45px;
+    margin: 0;
+
+    @media screen and (max-width: 1199px) {
+      font-size: 42px;
+      letter-spacing: 1.26px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 32px;
+      letter-spacing: 0.96px;
+      padding-bottom: 30px;
+    }
+  }
 
   &__container {
     display: flex;
@@ -11,7 +42,7 @@
       row-gap: 30px;
     }
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 767px) {
       row-gap: 22px;
     }
   }
