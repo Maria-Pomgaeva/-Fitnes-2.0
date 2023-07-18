@@ -1,6 +1,6 @@
-.accordion {
+.fag {
   background-color: #f8f9fc;
-  padding: 120px 103px 330px;
+  padding: 120px 103px 130px;
   margin: 0 auto;
 
   @media screen and (max-width: 1199px) {
@@ -32,22 +32,22 @@
     }
   }
 
-  &__container {
+  &__tabs {
     display: flex;
-    column-gap: 30px;
+    column-gap: 40px;
 
     @media screen and (max-width: 1199px) {
       flex-direction: column;
       column-gap: 0;
-      row-gap: 30px;
+      row-gap: 35px;
     }
 
     @media screen and (max-width: 767px) {
-      row-gap: 22px;
+      row-gap: 15px;
     }
   }
 
-  &__content {
+  &__tabs-content {
     width: 100%;
     flex-grow: 1;
   }
@@ -69,14 +69,16 @@
   }
 
   &__button.is-active {
-    border: none;
+    border: 1px solid;
+    border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    border-image-slice: 1;
     color: #ffffff;
     background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
   }
 
   &__button {
     display: block;
-    padding: 18px 105px;
+    padding: 18px 20px;
     cursor: pointer;
     color: #102654;
     text-align: center;
@@ -86,94 +88,114 @@
     line-height: 100%;
     border: 1px solid rgba(16, 38, 84, 0.2);
     background-color: rgba(255, 255, 255, 0);
-    max-width: 260px;
+    min-width: 260px;
 
     @media screen and (max-width: 1199px) {
-      max-width: 162px;
-      padding: 18px 55px;
+      min-width: 162px;
     }
 
     @media screen and (max-width: 767px) {
-      max-width: 140px;
-      padding: 14px 50px;
+      min-width: 140px;
+      padding: 14px 20px;
     }
   }
 }
 
-.accordion__container-inner {
-  width: 100%;
-}
+.accordion {
+  width: auto;
 
-.accordion__element-inner {
-  position: relative;
-  padding: 25px 0 15px;
-  border-top: 1px solid rgba(28, 51, 116, 0.2);
+  &__element {
+    position: relative;
+    padding: 32px 0 15px;
+    border-top: 1px solid rgba(28, 51, 116, 0.2);
 
-  & h3 {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 120%;
-    margin: 0;
-    padding-bottom: 10px;
-    width: 90%;
+    & h3 {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 120%;
+      margin: 0;
+      padding-bottom: 15px;
+      width: 90%;
 
-    @media screen and (max-width: 767px) {
+      @media screen and (max-width: 767px) {
+        font-size: 18px;
+        width: 70%;
+      }
+    }
+  }
+
+  &__element:last-child {
+    border-bottom: 1px solid rgba(28, 51, 116, 0.2);
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button-inner {
+    position: absolute;
+    content: "";
+    background-image: url("/img/svg/accordion-button-open.svg");
+    background-repeat: no-repeat;
+    margin-top: 18px;
+    padding: 0;
+    width: 44px;
+    height: 43px;
+    top: 0;
+    right: 0;
+  }
+
+  &__button-inner:hover {
+    position: absolute;
+    content: "";
+    background-image: url("/img/svg/accordion-button-open-hover.svg");
+    background-repeat: no-repeat;
+    margin-top: 18px;
+    padding: 0;
+    width: 44px;
+    height: 43px;
+    top: 0;
+    right: 0;
+  }
+
+  &__button-inner:disabled {
+    position: absolute;
+    content: "";
+    background-image: url("/img/svg/accordion-button-open-disabled.svg");
+    background-repeat: no-repeat;
+    margin-top: 18px;
+    padding: 0;
+    width: 44px;
+    height: 43px;
+    top: 0;
+    right: 0;
+  }
+
+  &__element.is-active .accordion__button-inner {
+    position: absolute;
+    content: "";
+    background-image: url("/img/svg/accordion-button-close.svg");
+    background-repeat: no-repeat;
+    margin-top: 18px;
+    padding: 0;
+    width: 44px;
+    height: 43px;
+    top: 0;
+    right: 0;
+  }
+
+  &__content {
+    & p {
       font-size: 18px;
-      width: 70%;
+      font-weight: 300;
+      line-height: 140%;
+      margin: 0;
+      width: 90%;
+
+      @media screen and (max-width: 767) {
+        font-size: 16px;
+      }
     }
   }
-}
-
-.accordion__button-inner {
-  position: absolute;
-  content: "";
-  background-image: url("/img/svg/accordion-button-open.svg");
-  background-repeat: no-repeat;
-  margin-top: 18px;
-  padding: 0;
-  width: 44px;
-  height: 43px;
-  top: 0;
-  right: 0;
-}
-
-.accordion__element-inner[open] .accordion__button-inner {
-  position: absolute;
-  content: "";
-  background-image: url("/img/svg/accordion-button-close.svg");
-  background-repeat: no-repeat;
-  margin-top: 18px;
-  padding: 0;
-  width: 44px;
-  height: 43px;
-  top: 0;
-  right: 0;
-}
-
-.accordion__element-inner:last-child {
-  border-bottom: 1px solid rgba(28, 51, 116, 0.2);
-}
-
-.accordion__content-inner {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-}
-
-.accordion__wrapper-inner {
-  & p {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 140%;
-    margin: 0;
-    width: 90%;
-
-    @media screen and (max-width: 767) {
-      font-size: 16px;
-    }
-  }
-}
-
-.accordion__wrapper-inner::webkit-details-marker {
-  display: none;
 }
