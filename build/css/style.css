@@ -1402,6 +1402,24 @@ button.swiper-pagination-bullet {
   row-gap: 10px;
 }
 
+.fag__button:hover {
+  border: 1px solid;
+  -o-border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image-slice: 1;
+  color: #ffffff;
+  background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+}
+
+.fag__button:active {
+  border: 1px solid;
+  -o-border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image-slice: 1;
+  color: rgba(255, 255, 255, 0.6);
+  background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+}
+
 .fag__button.is-active {
   border: 1px solid;
   -o-border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
@@ -1459,55 +1477,67 @@ button.swiper-pagination-bullet {
 }
 
 .accordion__button-inner {
-  position: absolute;
+  position: relative;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #102654;
+  cursor: pointer;
+}
+
+.accordion__button-inner::before,
+.accordion__button-inner::after {
   content: "";
-  background-image: url("/img/svg/accordion-button-open.svg");
-  background-repeat: no-repeat;
-  margin-top: 18px;
-  padding: 0;
-  width: 44px;
-  height: 43px;
-  top: 0;
-  right: 0;
+  display: block;
+  width: calc(100% - 36px);
+  height: 18px;
+  background: #102654;
+  position: absolute;
+  top: 32%;
+  left: 47%;
+  -webkit-transform: translate(-13%, -7%);
+  -ms-transform: translate(-13%, -7%);
+  transform: translate(-13%, -7%);
+}
+
+.accordion__button-inner::after {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .accordion__button-inner:hover {
-  position: absolute;
-  content: "";
-  background-image: url("/img/svg/accordion-button-open-hover.svg");
-  background-repeat: no-repeat;
-  margin-top: 18px;
-  padding: 0;
-  width: 44px;
-  height: 43px;
-  top: 0;
-  right: 0;
+  background-color: #102654;
 }
 
-.accordion__button-inner:disabled {
-  position: absolute;
-  content: "";
-  background-image: url("/img/svg/accordion-button-open-disabled.svg");
-  background-repeat: no-repeat;
-  margin-top: 18px;
-  padding: 0;
-  width: 44px;
-  height: 43px;
-  top: 0;
-  right: 0;
+.accordion__button-inner:hover::before,
+.accordion__button-inner:hover::after {
+  background: #ffffff;
+}
+
+.accordion__button-inner:active {
+  background-color: #102654;
+}
+
+.accordion__button-inner:active::before,
+.accordion__button-inner:active::after {
+  background: #ffffff;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .accordion__element.is-active .accordion__button-inner {
-  position: absolute;
-  content: "";
-  background-image: url("/img/svg/accordion-button-close.svg");
-  background-repeat: no-repeat;
-  margin-top: 18px;
-  padding: 0;
-  width: 44px;
-  height: 43px;
-  top: 0;
-  right: 0;
+  background-color: #102654;
+}
+
+.accordion__element.is-active .accordion__button-inner::before,
+.accordion__element.is-active .accordion__button-inner::after {
+  background: #ffffff;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .accordion__content p {
@@ -2083,8 +2113,7 @@ button,
   margin-left: -150px;
   width: 364px;
   height: 228px;
-  background-repeat: no-repeat;
-  background-image: url("/img/image/poster-video.png");
+  background-color: #102654;
 }
 
 .about__video-container iframe {

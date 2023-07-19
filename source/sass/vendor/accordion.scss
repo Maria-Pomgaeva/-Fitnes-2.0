@@ -68,6 +68,22 @@
     }
   }
 
+    &__button:hover {
+    border: 1px solid;
+    border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    border-image-slice: 1;
+    color: #ffffff;
+    background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+  }
+
+    &__button:active {
+    border: 1px solid;
+    border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    border-image-slice: 1;
+    color: rgb(255, 255, 255, 0.6);
+    background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+  }
+
   &__button.is-active {
     border: 1px solid;
     border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
@@ -134,56 +150,75 @@
   }
 
   &__button-inner {
+    position: relative;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #102654;
+    cursor: pointer;
+  }
+
+  &__button-inner::before,
+  &__button-inner::after {
+    content: '';
+    display: block;
+    width: calc(100% - 18px * 2);
+    height: 18px;
+    background: #102654;
     position: absolute;
-    content: "";
-    background-image: url("/img/svg/accordion-button-open.svg");
-    background-repeat: no-repeat;
-    margin-top: 18px;
-    padding: 0;
-    width: 44px;
-    height: 43px;
-    top: 0;
-    right: 0;
+    top: 32%;
+    left: 47%;
+    transform: translate(-13%,-7%);
+  }
+
+  &__button-inner::after {
+    transform: rotate(90deg);
   }
 
   &__button-inner:hover {
-    position: absolute;
-    content: "";
-    background-image: url("/img/svg/accordion-button-open-hover.svg");
-    background-repeat: no-repeat;
-    margin-top: 18px;
-    padding: 0;
-    width: 44px;
-    height: 43px;
-    top: 0;
-    right: 0;
+    background-color: #102654;
   }
 
-  &__button-inner:disabled {
-    position: absolute;
-    content: "";
-    background-image: url("/img/svg/accordion-button-open-disabled.svg");
-    background-repeat: no-repeat;
-    margin-top: 18px;
-    padding: 0;
-    width: 44px;
-    height: 43px;
-    top: 0;
-    right: 0;
+  &__button-inner:hover::before,
+  &__button-inner:hover::after {
+    background: #ffffff;
   }
 
-  &__element.is-active .accordion__button-inner {
-    position: absolute;
-    content: "";
-    background-image: url("/img/svg/accordion-button-close.svg");
-    background-repeat: no-repeat;
-    margin-top: 18px;
-    padding: 0;
-    width: 44px;
-    height: 43px;
-    top: 0;
-    right: 0;
+  &__button-inner:active {
+    background-color: #102654;
   }
+
+  &__button-inner:active::before,
+  &__button-inner:active::after {
+    background: #ffffff;
+    transform: rotate(-90deg);
+  }
+
+  &__element.is-active &__button-inner {
+    background-color: #102654;
+  }
+
+  &__element.is-active &__button-inner::before,
+  &__element.is-active &__button-inner::after {
+    background: #ffffff;
+    transform: rotate(-90deg);
+  }
+
+
+
+  // &__element.is-active .accordion__button-inner {
+  //   position: absolute;
+  //   content: "";
+  //   background-image: url("/img/svg/accordion-button-close.svg");
+  //   background-repeat: no-repeat;
+  //   margin-top: 18px;
+  //   padding: 0;
+  //   width: 44px;
+  //   height: 43px;
+  //   top: 0;
+  //   right: 0;
+  // }
 
   &__content {
     & p {
