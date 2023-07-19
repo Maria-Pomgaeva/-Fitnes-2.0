@@ -112,7 +112,42 @@
   margin-left: -150px;
   width: 364px;
   height: 228px;
-  background-color: #102654;
+
+  @include vp-1199 {
+    top: 586px;
+    width: 266px;
+    height: 167px;
+  }
+
+  @include vp-767 {
+    top: 688px;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.about__video-image {
+  width: 364px;
+  height: 228px;
+
+  @include vp-1199 {
+    width: 266px;
+    height: 167px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.about__video-container.active img {
+  position: absolute;
+  top: 415px;
+  left: 50%;
+  margin-left: -150px;
+  width: 364px;
+  height: 228px;
 
   @include vp-1199 {
     top: 586px;
