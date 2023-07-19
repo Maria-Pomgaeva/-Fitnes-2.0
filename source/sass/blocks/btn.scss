@@ -5,6 +5,7 @@
   cursor: pointer;
   transition: opacity $trans-default;
   font-family: $ff-roboto;
+  user-select: none;
 
   &--dark {
     padding: 22px 56px;

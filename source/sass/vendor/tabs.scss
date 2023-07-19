@@ -33,6 +33,7 @@
   border: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0);
   transition: opacity 0.5s ease;
+  user-select: none;
 
   @media screen and (max-width: 1199px) {
     font-size: 18px;
