@@ -60,7 +60,7 @@
   }
 
   @media screen and (max-width: 767px) {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 }
 
@@ -87,9 +87,28 @@
   padding: 65px 0;
   border: 7px solid rgba(255, 255, 255, 0);
 
-  @media screen and (max-width: 767px) {
-    padding: 55px 0;
+  @media screen and (max-width: 1199px) {
+    padding: 57px 0;
   }
+
+  @media screen and (max-width: 767px) {
+    padding: 45px 0;
+  }
+}
+
+.tabs__card:focus-within {
+  border: 7px solid;
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image-slice: 1;
+}
+
+.tabs__button {
+  padding: 24px 42px;
+}
+
+.tabs__button:hover {
+  background-color: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+  color: #ffffff;
 }
 
 .tabs__card:hover {

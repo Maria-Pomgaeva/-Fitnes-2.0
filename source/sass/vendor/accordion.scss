@@ -164,13 +164,13 @@
   &__button-inner::after {
     content: '';
     display: block;
-    width: calc(100% - 18px * 2);
+    width: 1px;
     height: 18px;
     background: #102654;
     position: absolute;
-    top: 32%;
-    left: 47%;
-    transform: translate(-13%,-7%);
+    top: 30%;
+    left: 48%;
+    transform: translate(16%,-3%);
   }
 
   &__button-inner::after {

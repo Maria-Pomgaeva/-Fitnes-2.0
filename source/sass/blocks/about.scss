@@ -1,18 +1,18 @@
 .about {
   &__container {
-    position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 165px 103px 235px;
+    padding: 165px 103px 120px;
 
     @include vp-1199 {
       flex-direction: column;
       align-items: center;
-      padding: 100px 45px 180px;
+      padding: 100px 45px;
     }
 
     @include vp-767 {
-      padding: 65px 0 260px;
+      padding: 65px 0 70px;
     }
   }
 
@@ -30,6 +30,7 @@
       width: 290px;
       text-align: left;
       padding: 0;
+      margin-bottom: 12px;
     }
 
     & h3 {
@@ -99,115 +100,187 @@
     }
 
     @include vp-767 {
-      height: 100vh;
-      margin-top: 30px;
+      height: 313px;
     }
   }
 }
 
-.about__video-container {
-  position: absolute;
-  top: 415px;
-  left: 50%;
-  margin-left: -150px;
-  width: 364px;
-  height: 228px;
+.about {
+  &__video-container {
+    position: relative;
+    margin-left: 77px;
+    margin-top: -113px;
 
-  @include vp-1199 {
-    top: 586px;
-    width: 266px;
-    height: 167px;
+    @include vp-1199 {
+      margin-left: 0;
+      margin-top: -86px;
+    }
+
+    @include vp-767 {
+      margin-top: 40px;
+    }
   }
 
-  @include vp-767 {
-    top: 688px;
-    left: 0;
-    margin-left: 0;
-    width: 100%;
-  }
-}
+  &__video-image img {
+    width: 364px;
+    height: 228px;
 
-.about__video-image {
-  width: 364px;
-  height: 228px;
+    @include vp-1199 {
+      width: 266px;
+      height: 167px;
+    }
 
-  @include vp-1199 {
-    width: 266px;
-    height: 167px;
+    @include vp-767 {
+      width: 100%;
+    }
   }
 
-  @include vp-767 {
-    width: 100%;
-  }
-}
-
-.about__video-container.active img {
-  position: absolute;
-  top: 415px;
-  left: 50%;
-  margin-left: -150px;
-  width: 364px;
-  height: 228px;
-
-  @include vp-1199 {
-    top: 586px;
-    width: 266px;
-    height: 167px;
+  &__button-video svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  @include vp-767 {
-    top: 688px;
-    left: 0;
-    margin-left: 0;
-    width: 100%;
-  }
-}
+  &__button-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
 
-.about__video-container iframe {
-  width: 364px;
-  height: 228px;
-
-  @include vp-1199 {
-    width: 266px;
-    height: 167px;
-  }
-
-  @include vp-767 {
-    width: 100%;
-  }
-}
-
-.about__video-container.active > .about__button-video {
-  transition: $trans-default;
-  display: none;
-}
-
-.about__button-video {
-  position: absolute;
-  display: block;
-  width: 100px;
-  height: 100px;
-  top: 25%;
-  left: 50%;
-  margin-left: -50px;
-  border: none;
-  background-color: $color-transparent;
-
-  &--icon {
     width: 100px;
     height: 100px;
-    background-image: url("/img/image/button-video.png");
-    background-repeat: no-repeat;
+
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+    fill: $color-default-white;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      width: 70px;
+      height: 70px;
+      padding: 2px;
+
+      background-image: linear-gradient(81deg, #003d85 0%, #b80027 89%);
+    }
+
+    &::after {
+      width: 100px;
+      height: 100px;
+      padding: 2px;
+
+      background-image: -webkit-gradient(
+        linear,
+        right bottom,
+        left top,
+        from(rgba(237, 2, 53, 0.2)),
+        to(rgba(0, 61, 183, 0.2))
+      );
+      background-image: linear-gradient(
+        to left top,
+        rgba(237, 2, 53, 0.2),
+        rgba(0, 61, 183, 0.2)
+      );
+      -webkit-mask: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #fff)
+          )
+          content-box,
+        -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff))
+          content-box,
+        -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    &:hover,
+    &:focus {
+      fill: $color-default-black;
+
+      &::before {
+        background-color: $color-default-white;
+        background-image: none;
+      }
+
+      &::after {
+        background-color: $color-default-black;
+        background-image: none;
+      }
+    }
+
+    &:active {
+      fill: $color-default-black;
+
+      &::before {
+        width: 58px;
+        height: 58px;
+
+        background-color: $color-default-white;
+        background-image: none;
+      }
+
+      &::after {
+        background-color: $color-default-black;
+        background-image: none;
+      }
+    }
+
+    &:disabled {
+      opacity: 0.4;
+
+      fill: $color-default-black;
+
+      &::before {
+        background-color: $color-default-white;
+        background-image: none;
+      }
+
+      &::after {
+        background-color: $color-default-black;
+        background-image: none;
+      }
+    }
   }
 
-  @include hover-focus {
-    background-image: url("/img/image/button-video-hover.png");
+  &__video-player {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: none;
+    inset: 0;
   }
 
-  @include active {
-    background-image: url("/img/image/button-video-active.png");
+  &__video-player iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__video-player.active {
+    display: block;
   }
 }
+
+
 
 .about__container-text {
   @include vp-1199 {
