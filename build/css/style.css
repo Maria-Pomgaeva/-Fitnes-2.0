@@ -3999,6 +3999,10 @@ button,
     padding-bottom: 6px;
   }
 
+  .comment__container {
+    padding: 90px 0 55px;
+  }
+
   .comment__container h2 {
     font-size: 32px;
     letter-spacing: 0.96;
@@ -4029,7 +4033,7 @@ button,
   }
 
   .comment__swiper-button--prev {
-    left: -2%;
+    left: 0%;
   }
 
   .comment__swiper-button--next {
@@ -4119,7 +4123,7 @@ button,
   }
 
   .trainers__swiper-button {
-    top: 42%;
+    top: 41.5%;
   }
 
   .trainers__swiper-button--prev {
