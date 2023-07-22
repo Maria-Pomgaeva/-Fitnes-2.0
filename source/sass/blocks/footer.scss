@@ -1,82 +1,125 @@
 .footer {
+  padding: 40px 0 33px;
+
+  color: $color-default-white;
   background-color: #030a1a;
 
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    color: $color-default-white;
-    padding: 44px 103px 32px;
-
-    @include vp-1199 {
-      padding: 47px 45px 49px;
-    }
-
-    @include vp-767 {
-      display: block;
-      columns: auto 2;
-      padding: 50px 15px;
-    }
+  @include vp-1199 {
+    padding: 45px 0 43px;
   }
 
-  &__logo {
-    @include vp-1199 {
-      width: 82px;
-      height: 18px;
-    }
+  @include vp-767 {
+    padding: 45px 0 50px;
   }
+}
 
-  &__list {
-    & ul {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      column-gap: 40px;
-      list-style: none;
-      font-size: 14px;
-      line-height: normal;
-      padding: 0;
-      margin: 0;
+.footer__container {
+  display: grid;
+  grid-template-columns: 95px 1fr auto;
+  gap: 20px;
 
-      @include vp-1199 {
-        column-gap: 30px;
-      }
+  @include vp-767 {
+    display: block;
 
-      @include vp-767 {
-        flex-direction: column;
-        row-gap: 20px;
-        margin-bottom: 20px;
-        font-size: 16px;
-      }
-    }
+    gap: 30px;
+    columns: auto 2;
   }
+}
 
-  &__social-icon {
-    & ul {
-      display: flex;
-      flex-direction: row;
-      column-gap: 11px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
+.footer__logo {
+  display: block;
+  width: 88px;
+  height: 32px;
 
-      @include vp-767 {
-        column-span: all;
-      }
-    }
+  @include vp-1199 {
+    width: 82px;
+    height: 18px;
+  }
+  @include vp-767 {
+    width: 68px;
+    height: 15px;
+    margin: 5px 0 21px;
+  }
+}
 
-    & a {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: $color-default-white;
-      border-radius: 50%;
-      width: 25px;
-      height: 25px;
+.footer__logo svg {
+  width: 100%;
+  height: 100%;
+}
 
-      @include hover-focus {
-        background-color: $color-egyptian-blue;
-      }
-    }
+.footer__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0 auto;
+
+  @include vp-767 {
+    display: block;
+
+    margin-bottom: 54px;
+  }
+}
+
+.footer__list-item {
+  margin: 0 20px;
+
+  @include vp-1199 {
+    margin: 0 15px;
+  }
+  @include vp-767 {
+    width: 100%;
+    margin: 0 0 16px;
+  }
+}
+
+.footer__list-link {
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.footer__social {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @include vp-767 {
+    justify-content: start;
+
+    column-span: all;
+  }
+}
+
+.footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+
+  color: #030a1a;
+
+  background-color: $color-default-white;
+  border-radius: 50%;
+
+  fill: currentColor;
+
+  @include hover-focus {
+    color: #ffffff;
+
+    background-color: $color-egyptian-blue;
   }
 }

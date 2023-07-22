@@ -3,10 +3,8 @@
 
 @import "vendor/normalize";
 @import "vendor/data-tabs";
-@import "vendor/tabs";
 // Swiper 7.4.1
 @import "vendor/swiper";
-@import "vendor/accordion.scss";
 @import "vendor/data-accordion.scss";
 
 // Global
@@ -22,18 +20,22 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
+@import "blocks/button";
 @import "blocks/header.scss";
 @import "blocks/footer.scss";
 @import "blocks/promo.scss";
 @import "blocks/about.scss";
+@import "blocks/tabs.scss";
 @import "blocks/subscription.scss";
 @import "blocks/show-card.scss";
+@import "blocks/trainers.scss";
 @import "blocks/adv.scss";
 @import "blocks/comment.scss";
 @import "blocks/stock.scss";
-@import "blocks/trainers.scss";
 @import "blocks/record.scss";
+@import "blocks/accordion.scss";
+@import "blocks/questions.scss";
+@import "blocks/form.scss";
 
 // ---------------------------------
 

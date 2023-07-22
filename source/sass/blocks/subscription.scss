@@ -2,16 +2,14 @@
   position: relative;
   background-color: $color-ghost-white;
 
-  &__container {
-    padding: 120px 103px;
+  padding: 120px 0 120px;
 
-    @include vp-1199 {
-      padding: 100px 163px;
-    }
+  @include vp-1199 {
+    padding: 100px 0;
+  }
 
-    @include vp-767 {
-      padding: 65px 15px 75px;
-    }
+  @include vp-767 {
+    padding: 65px 0px 75px;
   }
 
   & h2 {
@@ -20,8 +18,8 @@
     letter-spacing: 1.62px;
     line-height: normal;
     text-align: center;
-    margin: 0;
-    padding: 0 0 25px;
+
+    margin: 0 0 10px;
 
     @include vp-1199 {
       font-size: 42px;
@@ -31,7 +29,6 @@
     @include vp-767 {
       font-size: 32px;
       letter-spacing: 0.96px;
-      padding-bottom: 25px;
     }
   }
 }
@@ -39,77 +36,75 @@
 .subscription::after {
   position: absolute;
   content: "";
+
+  bottom: -70px;
+  right: 0;
+  width: 288px;
+  height: 415px;
+
   background-image: url("/img/image/subscription-image-desktop.png");
   background-repeat: no-repeat;
-  width: 348px;
-  height: 415px;
-  bottom: -75px;
-  right: 0;
 
   @include vp-1199 {
-    background-image: url("/img/image/subscription-image-tablet.png");
-    width: 328px;
+    bottom: -58px;
+    right: 0px;
+    width: 347px;
     height: 373px;
-    bottom: -53px;
-    right: 19px;
-  }
 
+    background-image: url("/img/image/subscription-image-tablet.png");
+  }
   @include vp-767 {
     display: none;
   }
 }
 
 .subscription__card-text {
-  text-align: center;
+  margin-bottom: 15px;
 
-  & h4 {
+  @include vp-767 {
+    margin-bottom: 7px;
+  }
+
+  & h3 {
     font-size: 26px;
     font-weight: 700;
-    margin: 0;
-    padding: 0 0 10px;
 
-    @include vp-1199 {
-      padding: 0 0 15px;
-    }
+    margin: 0 0 12px;
 
     @include vp-767 {
       font-size: 22px;
       line-height: 110%;
-      padding-bottom: 10px;
+
+      margin-bottom: 10px;
     }
   }
 
   & p {
-    color: #495a7d;
     margin: 0;
-    padding: 0;
   }
 }
 
 .subscription__card-price {
   position: relative;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 115px;
-  padding-top: 75px;
 
-  @include vp-1199 {
-    padding-top: 80px;
-  }
+  padding: 50px 0 35px;
 
   @include vp-767 {
-    padding-bottom: 100px;
-    padding-top: 53px;
+    padding: 47px 0 30px;
   }
 
   & span {
     position: absolute;
-    display: block;
-    color: #e8e8e8;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: inline-block;
+
     font-size: 100px;
     font-weight: 700;
-    opacity: 0.5;
-    z-index: 1;
+    line-height: 150%;
+    color: rgba(232, 232, 232, 0.5);
 
     @include vp-767 {
       font-size: 80px;
@@ -117,16 +112,35 @@
   }
 
   & p {
-    position: absolute;
+    position: relative;
     z-index: 3;
-    color: $color-egyptian-blue;
-    padding: 35px 10px 0;
+
+    display: inline-block;
+
     font-size: 60px;
     font-weight: 700;
-    margin: -14px;
+    line-height: 150%;
+    color: $color-egyptian-blue;
+
+    margin: 0;
+    padding-right: 45px;
+
+    background-image: url("../img/sprite/icon-rub.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 30px 42px;
 
     @include vp-767 {
       font-size: 48px;
+
+      padding-right: 35px;
+      background-size: 24px 33px;
     }
   }
+}
+
+.subscription__button {
+  width: 206px;
+  margin: 0 auto;
+  padding: 26px 20px;
 }

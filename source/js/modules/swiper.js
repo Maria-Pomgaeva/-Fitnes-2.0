@@ -1,12 +1,12 @@
 export const initSwiper = function () {
-  const swiperTrainers = new Swiper ('.trainers__items', {
+  const swiperTrainers = new Swiper ('.trainers__swiper', {
     navigation: {
       nextEl: '.trainers__swiper-button--next',
       prevEl: '.trainers__swiper-button--prev',
     },
 
-    slideToClickedSlide: true,
-    autoHeight: true,
+    watchSlidesProgress: true,
+    slideVisibleClass: 'trainers__slide--visible',
     loop: true,
 
     breakpoints: {
@@ -15,6 +15,7 @@ export const initSwiper = function () {
       },
       768: {
         slidesPerView: 2,
+        spaceBetween: 30,
       },
       1200: {
         slidesPerView: 4,
@@ -29,7 +30,9 @@ export const initSwiper = function () {
       prevEl: '.comment__swiper-button-prev',
     },
 
-    slideToClickedSlide: true,
+    watchSlidesProgress: true,
+    slideVisibleClass: 'comment__slide--visible',
+    loop: false,
     autoHeight: true,
     slidesPerView: 1,
   });
