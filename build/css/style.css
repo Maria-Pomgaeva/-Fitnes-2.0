@@ -1525,9 +1525,9 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1250px;
   margin: 0 auto;
-  padding: 0 103px;
+  padding: 0 45px;
 }
 
 .button {
@@ -1701,8 +1701,6 @@ button,
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
-  padding: 5px 10px;
-  border: 1px solid rgba(255, 255, 255, 0);
 }
 
 .footer__list-link:hover {
@@ -1838,13 +1836,11 @@ button,
 
 .promo__image {
   width: 500px;
-  height: 556px;
   margin-top: -12px;
 }
 
 .promo__image img {
   width: 100%;
-  height: 100%;
 }
 
 .about {
@@ -1896,12 +1892,10 @@ button,
 
 .about__image img {
   width: 100%;
-  height: 100%;
 }
 
 .about__image {
   max-width: 660px;
-  height: 401px;
 }
 
 .about__video-container {
@@ -2322,7 +2316,6 @@ button,
 
 .show-card__container-image img {
   width: 100%;
-  height: 500px;
   -o-object-position: center;
   object-position: center;
 }
@@ -2756,7 +2749,6 @@ button,
 
 .stock__season-image img {
   width: 100%;
-  height: 462px;
 }
 
 .questions {
@@ -3062,12 +3054,6 @@ button,
 }
 
 .record {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 1366px;
-  margin: 0 auto;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #102654), color-stop(50%, #ffffff));
   background-image: linear-gradient(90deg, #102654 50%, #ffffff 50%);
   border-top: 1px solid #74819c;
@@ -3080,6 +3066,15 @@ button,
   line-height: 156%;
   letter-spacing: 1.62px;
   margin: 0 0 16px;
+}
+
+.record__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
 .record__free-lesson {
@@ -3203,10 +3198,8 @@ button,
 
 .form input:focus-visible,
 .form input:focus {
-  border: 1px solid;
   border-color: #ffffff;
   outline: none;
-  padding: 5px 7px;
 }
 
 .form input:disabled {
@@ -3270,10 +3263,6 @@ button,
 */
 
 @media (max-width: 1199px) {
-  .container {
-    padding: 0 45px;
-  }
-
   .header {
     padding-top: 40px;
   }
@@ -3348,7 +3337,6 @@ button,
 
   .promo__image {
     width: 324px;
-    height: 390px;
     margin-top: 0;
   }
 
@@ -3391,7 +3379,6 @@ button,
 
   .about__image {
     max-width: none;
-    height: 345px;
   }
 
   .about__video-container {
@@ -3520,10 +3507,6 @@ button,
     border: 2px solid #ffffff;
   }
 
-  .show-card__container-image img {
-    height: 292px;
-  }
-
   .trainers {
     padding: 2px 0 60px;
   }
@@ -3631,10 +3614,6 @@ button,
     grid-row: auto;
   }
 
-  .stock__season-image img {
-    height: auto;
-  }
-
   .questions {
     padding: 103px 0 90px;
   }
@@ -3692,9 +3671,6 @@ button,
   }
 
   .record {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    padding: 0;
     background-image: none;
   }
 
@@ -3704,6 +3680,12 @@ button,
     line-height: 50px;
     letter-spacing: 1.26px;
     margin-bottom: 30px;
+  }
+
+  .record__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding: 0;
   }
 
   .record__free-lesson {
@@ -3883,10 +3865,6 @@ button,
     padding-right: 30px;
   }
 
-  .about__image {
-    height: 313px;
-  }
-
   .about__video-container {
     position: relative;
     -webkit-transform: none;
@@ -3973,10 +3951,6 @@ button,
 
   .show-card__text {
     padding-bottom: 51px;
-  }
-
-  .show-card__container-image img {
-    height: 292px;
   }
 
   .trainers {

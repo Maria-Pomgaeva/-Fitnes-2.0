@@ -1,17 +1,8 @@
 .record {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  max-width: 1366px;
-  margin: 0 auto;
-
   background-image: linear-gradient(90deg, $color-default-black 50%, $color-default-white 50%);
   border-top: 1px solid #74819c;
 
   @include vp-1199 {
-    grid-template-columns: 1fr;
-    padding: 0;
-
     background-image: none;
   }
 
@@ -41,6 +32,19 @@
 
       margin-bottom: 33px;
     }
+  }
+}
+
+.record__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  max-width: 1366px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    padding: 0;
   }
 }
 
@@ -130,7 +134,7 @@
       @include vp-1199 {
         padding-left: 33px;
       }
-      
+
       @include vp-767 {
         padding: 0;
       }
