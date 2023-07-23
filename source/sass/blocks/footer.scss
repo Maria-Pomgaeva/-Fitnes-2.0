@@ -35,10 +35,17 @@
     width: 82px;
     height: 18px;
   }
+
   @include vp-767 {
     width: 68px;
     height: 15px;
     margin: 5px 0 21px;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $color-default-white;
+    outline: none;
   }
 }
 
@@ -69,6 +76,7 @@
   @include vp-1199 {
     margin: 0 15px;
   }
+  
   @include vp-767 {
     width: 100%;
     margin: 0 0 16px;
@@ -79,10 +87,29 @@
   font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
+  padding: 5px 10px;
+  border: 1px solid $color-transparent;
 
   @include vp-767 {
     font-size: 16px;
     line-height: 19px;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $color-default-white;
+  }
+
+  &:focus {
+    border: 1px solid $color-default-white;
+    outline: none;
+  }
+
+  &:active {
+    border: 1px solid $color-transparent;
+  }
+
+  &:disabled {
+    opacity: 0.4;
   }
 }
 
@@ -117,9 +144,18 @@
 
   fill: currentColor;
 
-  @include hover-focus {
+  &:hover,
+  &:focus {
     color: #ffffff;
-
     background-color: $color-egyptian-blue;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-default-black;
+  }
+
+  &:disabled {
+    opacity: 0.5;
   }
 }

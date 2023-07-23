@@ -1,119 +1,126 @@
 .questions {
   background-color: #f8f9fc;
-  padding: 120px 103px 130px;
+
+  padding: 123px 0;
   margin: 0 auto;
 
-  @media screen and (max-width: 1199px) {
-    padding: 100px 45px 100px;
+  @include vp-1199 {
+    padding: 103px 0 90px;
   }
 
-  @media screen and (max-width: 767px) {
-    padding: 70px 15px 60px;
+  @include vp-767 {
+    padding: 73px 0 70px;
   }
 
   & h2 {
-    font-family: "Alumni Sans", "Helvetica", sans-serif;
+    font-family: $ff-alumni;
     font-size: 54px;
     line-height: normal;
     letter-spacing: 1.62px;
-    padding-bottom: 45px;
-    margin: 0;
 
-    @media screen and (max-width: 1199px) {
+    margin: 0 0 40px;
+
+    @include vp-1199 {
       font-size: 42px;
       letter-spacing: 1.26px;
       text-align: center;
+
+      margin-bottom: 43px;
     }
 
-    @media screen and (max-width: 767px) {
+    @include vp-767 {
       font-size: 32px;
       letter-spacing: 0.96px;
-      padding-bottom: 30px;
+
+      margin-bottom: 30px;
     }
   }
+}
 
-  &__tabs {
-    display: flex;
-    column-gap: 40px;
+.questions__tabs {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
 
-    @media screen and (max-width: 1199px) {
-      flex-direction: column;
-      column-gap: 0;
-      row-gap: 35px;
-    }
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  @include vp-767 {
+    gap: 30px;
+  }
+}
 
-    @media screen and (max-width: 767px) {
-      row-gap: 15px;
-    }
+.questions__controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 13px;
+  align-content: start;
+
+  @include vp-1199 {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  &__tabs-content {
-    width: 100%;
-    flex-grow: 1;
+  @include vp-767 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
+}
 
-  &__controls {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+.questions__button {
+  display: block;
 
-    @media screen and (max-width: 1199px) {
-      flex-direction: row;
-      column-gap: 10px;
-      justify-content: center;
-    }
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  font-family: $ff-roboto;
+  text-align: center;
 
-    @media screen and (max-width: 767px) {
-      flex-wrap: wrap;
-    }
+  padding: 16px 20px;
+  cursor: pointer;
+  user-select: none;
+
+  background-color: transparent;
+  border: 1px solid rgba(16, 38, 84, 0.2);
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 19px;
+
+    padding: 10px 20px 12px;
   }
+}
 
-    &__button:hover {
-    border: 1px solid;
-    border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
-    border-image-slice: 1;
-    color: #ffffff;
-    background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
-  }
+.questions__button:hover,
+.questions__button:focus {
+  border: 1px solid $color-default-black;
+  outline: none;
+}
 
-    &__button:active {
-    border: 1px solid;
-    border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
-    border-image-slice: 1;
-    color: rgb(255, 255, 255, 0.6);
-    background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
-  }
+.questions__button:active {
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image-slice: 1;
+  color: $color-default-white;
+  background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+  outline: none;
+}
 
-  &__button.is-active {
-    border: 1px solid;
-    border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
-    border-image-slice: 1;
-    color: #ffffff;
-    background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
-  }
+.questions__button.is-active {
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image-slice: 1;
+  color: $color-default-white;
+  background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+}
 
-  &__button {
-    display: block;
-    padding: 18px 20px;
-    cursor: pointer;
-    color: #102654;
-    text-align: center;
-    font-family: "Roboto Condensed", "Verdana", sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 100%;
-    border: 1px solid rgba(16, 38, 84, 0.2);
-    background-color: rgba(255, 255, 255, 0);
-    min-width: 260px;
-    user-select: none;
+.questions__button:disabled {
+  color: #c8c9cc;
 
-    @media screen and (max-width: 1199px) {
-      min-width: 162px;
-    }
+  border: 1px solid rgba(16, 38, 84, 0.2);
 
-    @media screen and (max-width: 767px) {
-      min-width: 140px;
-      padding: 14px 20px;
-    }
-  }
+  pointer-events: none;
+}
+
+.questions__element {
+  width: 100%;
 }

@@ -4,6 +4,7 @@
   @include vp-1199 {
     padding: 2px 0 60px;
   }
+
   @include vp-767 {
     padding-bottom: 28px;
   }
@@ -40,6 +41,7 @@
   @include vp-1199 {
     padding: 33px 28px;
   }
+
   @include vp-767 {
     padding: 44px 0;
   }
@@ -51,6 +53,7 @@
   @include vp-1199 {
     padding: 0 10.3%;
   }
+  
   @include vp-767 {
     padding: 0 15%;
   }
@@ -67,12 +70,8 @@
   }
 }
 
-  // height: 294px;
-  // height: 274px;
-
 .trainers__image img {
   width: 100%;
-
 }
 
 .trainers__text {
@@ -181,7 +180,7 @@
   transform: translateY(-50%);
 
   @include vp-767 {
-    top: 59%;
+    top: 57%;
 
     width: 40px;
     height: 40px;
@@ -208,6 +207,7 @@
 .trainers__swiper-button:hover,
 .trainers__swiper-button:focus {
   border-color: $color-default-black;
+  outline: none;
 }
 
 .trainers__swiper-button:active {

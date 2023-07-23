@@ -24,10 +24,11 @@
     @include hover-focus {
       background-color: $color-default-white;
       color: $color-egyptian-blue;
+      outline: none;
     }
 
     @include active {
-      color: $color-default-black;
+      color: rgb(255, 255, 255, 0.4);
     }
   }
 
@@ -45,7 +46,7 @@
     }
 
     @include active {
-      color: opacity($color: #ffffff) 0.6;
+      color: rgb(255, 255, 255, 0.4);
     }
   }
 

@@ -26,8 +26,8 @@ export const initSwiper = function () {
 
   const swiperComment = new Swiper('.comment__items', {
     navigation: {
-      nextEl: '.comment__swiper-button-next',
-      prevEl: '.comment__swiper-button-prev',
+      nextEl: '.comment__swiper-button--next',
+      prevEl: '.comment__swiper-button--prev',
     },
 
     watchSlidesProgress: true,

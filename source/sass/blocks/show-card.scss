@@ -17,6 +17,7 @@
   @include vp-1199 {
     grid-template-columns: minmax(auto, 300px) 1fr;
   }
+
   @include vp-767 {
     display: block;
   }
@@ -39,6 +40,7 @@
 
     padding: 47px 46px;
   }
+
   @include vp-767 {
     padding-bottom: 51px;
   }
@@ -161,6 +163,7 @@
   @include vp-1199 {
     height: 292px;
   }
+  
   @include vp-767 {
     height: 292px;
   }
