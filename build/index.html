@@ -7,6 +7,9 @@
     <meta name="description" content="ФИТНЕС ЦЕНТР">
     <title>ФИТНЕС ЦЕНТР SUPERGYM</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="img/favicon/manifest.json">
     <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
@@ -75,13 +78,13 @@
                   <source type="image/webp" srcset="img/image/poster-video.webp 1x, img/image/poster-video@2x.webp 2x">
                   <img src="img/image/poster-video.jpg" srcset="img/image/poster-video@2x.jpg" width="364" height="228" alt="Наш зал">
                 </picture>
-                <a class="about__button-video" href="https://www.youtube.com/embed/9TZXsZItgdw" id="link">
+                <a class="about__button-video" id="link">
                   <svg width="16" height="16">
                     <use xlink:href="img/sprite.svg#play-video"></use>
                   </svg>
                 </a>
               </div>
-              <div class="about__video-player" id="player"></div>
+              <div class="about__video-player" id="player"  data-src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1"></div>
             </div>
           </div>
         </section>
