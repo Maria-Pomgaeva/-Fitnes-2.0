@@ -27,7 +27,7 @@
 
 .form input {
   width: 100%;
-  padding: 6px 0;
+  padding: 5px;
 
   font-size: 14px;
   line-height: 16px;
@@ -48,10 +48,13 @@
     border-color: $color-default-white;
   }
 
+  &:active,
   &:focus-visible,
   &:focus {
+    border: 1px solid;
     border-color: $color-default-white;
     outline: none;
+    padding: 5px;
   }
 
   &:disabled {

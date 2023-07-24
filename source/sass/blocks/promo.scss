@@ -47,7 +47,7 @@
   }
 
   @include vp-767 {
-    max-width: fit-content;
+    max-width: none;
     margin: 0 auto;
     padding-top: 45px;
   }
@@ -135,6 +135,7 @@
   @include vp-767 {
     gap: 10px 0;
     padding: 15px 0 25px;
+    justify-items: end;
   }
 }
 

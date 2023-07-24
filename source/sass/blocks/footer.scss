@@ -71,7 +71,7 @@
 }
 
 .footer__list-item {
-  margin: 0 20px;
+  margin: 0 15px;
 
   @include vp-1199 {
     margin: 0 15px;
@@ -87,6 +87,7 @@
   font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
+  padding: 5px 1px 5px 1px;
 
   @include vp-767 {
     font-size: 16px;
@@ -95,15 +96,18 @@
 
   &:hover {
     border-bottom: 1px solid $color-default-white;
+    padding: 5px 1px 5px 1px;
   }
 
   &:focus {
-    border: 1px solid $color-default-white;
     outline: none;
+    padding: 5px;
+    border: 1px solid $color-default-white;
   }
 
   &:active {
     border: 1px solid $color-transparent;
+    padding: 5px;
   }
 
   &:disabled {

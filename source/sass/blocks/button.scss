@@ -21,14 +21,16 @@
     color: $color-default-white;
     border: 4px solid $color-default-white;
 
-    @include hover-focus {
+    &:hover,
+    &:focus {
       background-color: $color-default-white;
       color: $color-egyptian-blue;
       outline: none;
     }
 
-    @include active {
-      color: rgb(255, 255, 255, 0.4);
+    &:active {
+      background-color: $color-default-white;
+      color: $color-default-black;
     }
   }
 
@@ -38,14 +40,15 @@
     outline: 2px solid $color-default-black;
     color: $color-default-black;
 
-    @include hover-focus {
+    &:hover,
+    &:focus {
       color: $color-default-white;
 
       background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
       outline: none;
     }
 
-    @include active {
+    &:active {
       color: rgb(255, 255, 255, 0.4);
     }
   }

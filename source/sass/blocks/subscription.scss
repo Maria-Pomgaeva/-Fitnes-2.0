@@ -42,7 +42,7 @@
   width: 288px;
   height: 415px;
 
-  background-image: url("/img/image/subscription-image-desktop.png");
+  background-image: url("/img/image/subscription-desktop.png");
   background-repeat: no-repeat;
 
   @include vp-1199 {
@@ -51,9 +51,9 @@
     width: 347px;
     height: 373px;
 
-    background-image: url("/img/image/subscription-image-tablet.png");
+    background-image: url("/img/image/subscription-tablet.png");
   }
-  
+
   @include vp-767 {
     display: none;
   }
@@ -144,4 +144,8 @@
   width: 206px;
   margin: 0 auto;
   padding: 26px 20px;
+
+  @include vp-767 {
+    width: 100%;
+  }
 }

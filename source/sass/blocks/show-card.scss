@@ -87,7 +87,7 @@
     font-size: 40px;
     line-height: 47px;
 
-    border-top: 1px solid #ffffff;
+    border-top: 1px solid $color-default-white;
 
     @include vp-1199 {
       font-size: 24px;

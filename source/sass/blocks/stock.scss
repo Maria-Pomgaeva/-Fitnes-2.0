@@ -109,20 +109,27 @@
   text-transform: uppercase;
   color: #1c3374;
 
+  border: 1px solid $color-transparent;
+  padding: 5px;
   border-bottom: 1px solid #1c3374;
-
+  
   @include vp-767 {
     margin: auto auto 0;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     outline: 0;
     opacity: 0.8;
   }
 
+  &:focus {
+    outline: none;
+    border: 1px solid #1c3374;
+    padding: 5px;
+  }
+
   &:active {
-    opacity: 0.3;
+    opacity: 1;
   }
 }
 
@@ -201,6 +208,12 @@
   color: $color-default-white;
 
   border-bottom: 1px solid $color-default-white;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $color-default-white;
+    padding: 5px;
+  }
 }
 
 .stock__season-image img {

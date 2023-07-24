@@ -91,12 +91,6 @@
 .accordion__button-inner:focus::before,
 .accordion__button-inner:focus::after {
   background: $color-default-white;
-  top: 50%;
-  transform: translateY(-50%) rotate(90deg);
-
-  @include vp-767 {
-    transform: translateX(-50%) rotate(180deg);
-  }
 }
 
 .accordion__button-inner::before,
