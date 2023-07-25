@@ -2188,7 +2188,7 @@ button,
   right: 0;
   width: 288px;
   height: 415px;
-  background-image: url("/img/image/subscription-desktop.png");
+  background-image: url("../img/image/subscription-desktop.png");
   background-repeat: no-repeat;
 }
 
@@ -3484,7 +3484,7 @@ span.input-message.is-invalid {
     right: 0;
     width: 347px;
     height: 373px;
-    background-image: url("/img/image/subscription-tablet.png");
+    background-image: url("../img/image/subscription-tablet.png");
   }
 
   .show-card {
