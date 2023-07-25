@@ -2183,6 +2183,7 @@ button,
 .subscription::after {
   position: absolute;
   content: "";
+  display: block;
   bottom: -70px;
   right: 0;
   width: 288px;
