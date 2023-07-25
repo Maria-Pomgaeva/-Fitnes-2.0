@@ -2978,7 +2978,7 @@ button,
 }
 
 .comment {
-  padding: 123px 0 79px;
+  padding: 123px 0 85px;
 }
 
 .comment h2 {
@@ -2994,7 +2994,7 @@ button,
 .comment__items {
   position: relative;
   margin: 0 auto;
-  padding: 37px 6.5%;
+  padding: 40px 6.5%;
   max-width: 712px;
 }
 
@@ -3130,7 +3130,7 @@ button,
 .record__contact h2 {
   font-weight: 600;
   line-height: 65px;
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 }
 
 .record__contact-container {
@@ -3803,7 +3803,7 @@ input:focus:-ms-input-placeholder {
   }
 
   .record__contact {
-    padding: 53px 133px 64px;
+    padding: 60px 133px 64px;
   }
 
   .record__contact h2 {
@@ -4200,7 +4200,7 @@ input:focus:-ms-input-placeholder {
   }
 
   .stock__season-text span {
-    margin: -7px auto 13px;
+    margin: -16px auto 13px;
   }
 
   .questions {
@@ -4329,11 +4329,11 @@ input:focus:-ms-input-placeholder {
   }
 
   .record__contact {
-    padding: 50px 15px 63px;
+    padding: 65px 15px 63px;
   }
 
   .record__contact h2 {
-    margin-bottom: 25px;
+    margin-bottom: 37px;
   }
 
   .record__contact-container {
