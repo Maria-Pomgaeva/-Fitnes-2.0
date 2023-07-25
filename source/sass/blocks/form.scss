@@ -63,7 +63,8 @@
 }
 
 .form__name-label.is-invalid input {
-  border-color: $color-torch-red;
+  border: none;
+  border-bottom: 1px solid #ff121f;
 }
 
 span.input-message.is-invalid  {
@@ -74,6 +75,15 @@ span.input-message.is-invalid  {
   font-weight: 400;
   line-height: 22px;
 }
+
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
 
 .form__button {
   grid-column: 1 / -1;

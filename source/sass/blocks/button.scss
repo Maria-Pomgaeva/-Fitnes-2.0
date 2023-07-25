@@ -49,8 +49,9 @@
     }
 
     &:active {
-      color: rgb(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.4);
       background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+      outline: none;
     }
   }
 

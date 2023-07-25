@@ -116,10 +116,14 @@
   background-color: $color-default-white;
   border: 7px solid $color-transparent;
 
-  padding: 58px 20px 60px;
+  padding: 59px 20px 60px;
+
+  @include vp-1199 {
+    padding: 60px 20px 61px;
+  }
 
   @include vp-767 {
-    padding: 43px 20px 47px;
+    padding: 46px 20px 47px;
   }
 }
 
@@ -132,6 +136,12 @@
 .tabs__card:hover .button {
   color: $color-default-white;
 
+  background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
+  outline: none;
+}
+
+.tabs__card:active .button {
+  color: rgba(255, 255, 255, 0.4);
   background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
   outline: none;
 }

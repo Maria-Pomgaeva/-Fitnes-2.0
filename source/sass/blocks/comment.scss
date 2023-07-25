@@ -1,8 +1,8 @@
 .comment {
-  padding: 123px 0 77px;
+  padding: 123px 0 79px;
 
   @include vp-1199 {
-    padding: 97px 0 58px;
+    padding: 95px 0 58px;
   }
 
   @include vp-767 {
@@ -35,16 +35,16 @@
   position: relative;
 
   margin: 0 auto;
-  padding: 40px 6.5%;
+  padding: 37px 6.5%;
   max-width: 712px;
 
   @include vp-1199 {
     max-width: 720px;
-    padding: 46px 8.5%;
+    padding: 43px 8.5%;
   }
 
   @include vp-767 {
-    padding: 48px 32px;
+    padding: 46px 32px;
   }
 }
 
@@ -52,7 +52,7 @@
   display: grid;
   grid-template-columns: 80px 1fr;
   gap: 16px 30px;
-  padding: 60px;
+  padding: 57px;
 
   background-color: #1c3374;
   color: $color-default-white;
