@@ -56,6 +56,7 @@
   align-items: start;
 
   width: 100%;
+  min-height: 211px;
   padding: 23px 30px 30px;
 
   color: #1c3374;
@@ -101,6 +102,8 @@
 
   display: inline-block;
   margin-top: auto;
+  margin-left: -7px;
+  margin-bottom: -6px;
 
   font-size: 12px;
   font-weight: 700;
@@ -112,7 +115,7 @@
   border: 1px solid $color-transparent;
   padding: 5px;
   border-bottom: 1px solid #1c3374;
-  
+
   @include vp-767 {
     margin: auto auto 0;
   }

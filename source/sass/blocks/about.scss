@@ -133,14 +133,16 @@
 .about__video-container {
   position: absolute;
   bottom: 0;
+  top: 288px;
   left: 50%;
   transform: translateX(-50%);
 
-  width: 364px;
+  width: 29%;
   margin-left: 40px;
 
   @include vp-1199 {
-    width: 266px;
+    width: 35%;
+    top: auto;
     margin-left: 0;
   }
 
@@ -169,11 +171,7 @@
 }
 
 .about__video-image img {
-  height: 228px;
-
-  @include vp-1199 {
-    height: 167px;
-  }
+  width: 100%;
 }
 
 .about__video-player {
@@ -189,16 +187,8 @@
 
 .about__video-player iframe {
   display: block;
-  width: 364px;
-  height: 228px;
-
-  @include vp-1199 {
-    width: 266px;
-    height: 167px;
-  }
-  @include vp-767 {
-    width: 100%;
-  }
+  width: 100%;
+  height: 100%;
 }
 
 .about__video-player.active {
@@ -239,9 +229,9 @@
   }
 
   &:hover,
-  &:focus-visible,
   &:focus {
     fill: $color-default-black;
+    outline: none;
 
     &::before {
       background-color: $color-default-white;
