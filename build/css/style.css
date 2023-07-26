@@ -3263,6 +3263,12 @@ span.input-message.is-invalid {
   line-height: 22px;
 }
 
+.form input:active,
+.form input:focus,
+.form input:focus-visible {
+  border: 1px solid #ffffff;
+}
+
 input::-webkit-input-placeholder {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease;
